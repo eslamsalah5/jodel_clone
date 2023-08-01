@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jodel_app/views/onboarding_view/first_onboarding_view/first_onboarding_view.dart';
+import 'package:jodel_app/views/on%20Boarding/presentation/on_boarding_view.dart';
 import 'package:jodel_app/views/splash_view/splash_view.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         SplashView.pageID: (context) => const SplashView(),
-        FirstOnBoardingView.pageID: (context) => const FirstOnBoardingView(),
+        OnBoardingView.pageID: (context) => const OnBoardingView(),
       },
       initialRoute: SplashView.pageID,
       debugShowCheckedModeBanner: false,
