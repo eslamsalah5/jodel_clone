@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jodel_app/views/location_view/location_view.dart';
 
 import 'custom_page_view.dart';
 
@@ -47,13 +48,16 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                     children: [
                       MaterialButton(
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
+                            borderRadius: BorderRadius.circular(5)),
                         color: Colors.white,
                         padding: EdgeInsets.symmetric(
                           horizontal: MediaQuery.of(context).size.width * 0.25,
                           vertical: 14,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(
+                              context, LocationView.pageID);
+                        },
                         child: const Text(
                           'Start Now',
                           style: TextStyle(fontSize: 20),
