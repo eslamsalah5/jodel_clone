@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jodel_app/views/info_on_boarding_view/info_on_boarding.dart';
 
 class LocationViewBody extends StatelessWidget {
   const LocationViewBody({super.key});
@@ -51,7 +52,10 @@ class LocationViewBody extends StatelessWidget {
                           horizontal: MediaQuery.of(context).size.width * 0.25,
                           vertical: 14,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(
+                              context, InfoOnBoardingView.pageID);
+                        },
                         child: const Text(
                           'Allow Location',
                           style: TextStyle(fontSize: 20),

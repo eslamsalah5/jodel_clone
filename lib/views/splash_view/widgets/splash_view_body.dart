@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:jodel_app/views/on%20Boarding/presentation/on_boarding_view.dart';
+import 'package:jodel_app/views/on_boarding/presentation/on_boarding_view.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
