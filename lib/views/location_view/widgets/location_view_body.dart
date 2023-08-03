@@ -36,6 +36,7 @@ class LocationViewBody extends StatelessWidget {
                     children: [
                       const Text(
                         'Jodel needs your location to connect\nYou with the community around you',
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,

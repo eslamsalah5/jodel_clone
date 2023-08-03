@@ -11,6 +11,7 @@ class InfoPageViewSecondItem extends StatelessWidget {
         children: [
           const Text(
             'What is your Age?',
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 22,
               color: Colors.white,
@@ -45,6 +46,7 @@ class InfoPageViewSecondItem extends StatelessWidget {
               ),
               const Text(
                 'No one will see your age?',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,
@@ -72,6 +74,7 @@ class InfoPageViewSecondItem extends StatelessWidget {
               ),
               const Text(
                 'I confirm that my age is correct',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,

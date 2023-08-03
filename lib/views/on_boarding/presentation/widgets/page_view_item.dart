@@ -22,13 +22,14 @@ class PageViewItem extends StatelessWidget {
             title!,
             style: const TextStyle(
                 fontSize: 25, color: Colors.white, fontWeight: FontWeight.w600),
-            textAlign: TextAlign.left,
+            textAlign: TextAlign.center,
           ),
           const SizedBox(
             height: 20,
           ),
           Text(
             subTitle!,
+            textAlign: TextAlign.center,
             style: const TextStyle(
               fontSize: 20,
               color: Colors.white,

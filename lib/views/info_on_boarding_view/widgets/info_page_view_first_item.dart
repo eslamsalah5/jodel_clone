@@ -16,6 +16,7 @@ class InfoPageViewFirstItem extends StatelessWidget {
           children: [
             const Text(
               'To which gender do you most indentify?',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 22,
                 color: Colors.white,

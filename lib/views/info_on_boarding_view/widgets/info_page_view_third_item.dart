@@ -15,6 +15,7 @@ class InfoPageViewThirdItem extends StatelessWidget {
           children: [
             const Text(
               'Which user group best descripes you?',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 22,
                 color: Colors.white,

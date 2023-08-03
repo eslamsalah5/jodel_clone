@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jodel_app/views/app_home_view/app_home_view.dart';
 import 'package:jodel_app/views/info_on_boarding_view/info_on_boarding.dart';
 import 'package:jodel_app/views/location_view/location_view.dart';
 import 'package:jodel_app/views/on_boarding/presentation/on_boarding_view.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         OnBoardingView.pageID: (context) => const OnBoardingView(),
         LocationView.pageID: (context) => const LocationView(),
         InfoOnBoardingView.pageID: (context) => const InfoOnBoardingView(),
+        AppHomeView.pageID: (context) => AppHomeView(),
       },
       initialRoute: SplashView.pageID,
       debugShowCheckedModeBanner: false,
