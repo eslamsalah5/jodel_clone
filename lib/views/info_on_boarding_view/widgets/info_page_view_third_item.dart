@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'custom_user_group.dart';
 
@@ -7,103 +8,104 @@ class InfoPageViewThirdItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding:
-            EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.15),
-        child: Column(
-          children: [
-            const Text(
-              'Which user group best descripes you?',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.white,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                  left: 10,
-                  right: 10,
-                  top: MediaQuery.of(context).size.height * 0.15),
-              child: const Column(
+    return Column(
+      children: [
+        const Spacer(),
+        Text(
+          'Which user group best descripes you?',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 22.sp,
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        const Spacer(
+          flex: 2,
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            left: 10.w,
+            right: 10.w,
+          ),
+          child: Column(
+            children: [
+              Row(
                 children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: CustomUserGroupContainer(
-                          image: 'assets/images/graduate.png',
-                          title: 'University Student',
-                        ),
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Expanded(
-                        child: CustomUserGroupContainer(
-                          image: 'assets/images/bag.png',
-                          title: 'Emplyee',
-                        ),
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Expanded(
-                        child: CustomUserGroupContainer(
-                          image: 'assets/images/smile.png',
-                          title: 'Apprentice',
-                        ),
-                      ),
-                    ],
+                  const Expanded(
+                    child: CustomUserGroupContainer(
+                      image: 'assets/images/graduate.png',
+                      title: 'University Student',
+                    ),
                   ),
                   SizedBox(
-                    height: 15,
+                    width: 10.w,
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: CustomUserGroupContainer(
-                          image: 'assets/images/school-bag.png',
-                          title: 'High School Graduate',
-                        ),
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Expanded(
-                        child: CustomUserGroupContainer(
-                          image: 'assets/images/magician-hat.png',
-                          title: 'High School Student',
-                        ),
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Expanded(
-                        child: CustomUserGroupContainer(
-                          image: 'assets/images/aliens.png',
-                          title: 'Other',
-                        ),
-                      ),
-                    ],
+                  const Expanded(
+                    child: CustomUserGroupContainer(
+                      image: 'assets/images/bag.png',
+                      title: 'Emplyee',
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10.w,
+                  ),
+                  const Expanded(
+                    child: CustomUserGroupContainer(
+                      image: 'assets/images/smile.png',
+                      title: 'Apprentice',
+                    ),
                   ),
                 ],
               ),
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.28,
-            ),
-            const Text(
-              'No one will see your user group',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.white,
+              SizedBox(
+                height: 10.h,
               ),
-            ),
-          ],
+              Row(
+                children: [
+                  const Expanded(
+                    child: CustomUserGroupContainer(
+                      image: 'assets/images/school-bag.png',
+                      title: 'High School Graduate',
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10.w,
+                  ),
+                  const Expanded(
+                    child: CustomUserGroupContainer(
+                      image: 'assets/images/magician-hat.png',
+                      title: 'High School Student',
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10.w,
+                  ),
+                  const Expanded(
+                    child: CustomUserGroupContainer(
+                      image: 'assets/images/aliens.png',
+                      title: 'Other',
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
-      ),
+        const Spacer(
+          flex: 3,
+        ),
+        Text(
+          'No one will see your user group',
+          style: TextStyle(
+            fontSize: 18.sp,
+            color: Colors.white,
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+      ],
     );
   }
 }

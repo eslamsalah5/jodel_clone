@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jodel_app/views/info_on_boarding_view/info_on_boarding.dart';
 
 class LocationViewBody extends StatelessWidget {
@@ -15,7 +16,7 @@ class LocationViewBody extends StatelessWidget {
           height: double.infinity,
         ),
         Padding(
-          padding: const EdgeInsets.only(bottom: 30),
+          padding: EdgeInsets.only(bottom: 30.h),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -34,16 +35,19 @@ class LocationViewBody extends StatelessWidget {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        'Jodel needs your location to connect\nYou with the community around you',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.95,
+                        child: Text(
+                          'Jodel needs your location to connect You with the community around you',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 20.sp,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
-                      const SizedBox(
-                        height: 30,
+                      SizedBox(
+                        height: 30.h,
                       ),
                       MaterialButton(
                         shape: RoundedRectangleBorder(
@@ -51,15 +55,15 @@ class LocationViewBody extends StatelessWidget {
                         color: Colors.white,
                         padding: EdgeInsets.symmetric(
                           horizontal: MediaQuery.of(context).size.width * 0.25,
-                          vertical: 14,
+                          vertical: 14.h,
                         ),
                         onPressed: () {
                           Navigator.pushReplacementNamed(
                               context, InfoOnBoardingView.pageID);
                         },
-                        child: const Text(
+                        child: Text(
                           'Allow Location',
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(fontSize: 20.sp),
                         ),
                       ),
                     ],

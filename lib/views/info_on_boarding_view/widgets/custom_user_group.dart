@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jodel_app/views/app_home_view/app_home_view.dart';
 
 class CustomUserGroupContainer extends StatelessWidget {
@@ -15,7 +16,7 @@ class CustomUserGroupContainer extends StatelessWidget {
         Navigator.pushReplacementNamed(context, AppHomeView.pageID);
       },
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.17,
+        height: MediaQuery.of(context).size.height * 0.19,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -25,17 +26,21 @@ class CustomUserGroupContainer extends StatelessWidget {
           children: [
             Image.asset(
               image,
-              width: 70,
+              width: MediaQuery.of(context).size.height * 0.1,
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            Text(
-              title,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.3,
+              height: MediaQuery.of(context).size.height * 0.05,
+              child: Text(
+                title,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
           ],

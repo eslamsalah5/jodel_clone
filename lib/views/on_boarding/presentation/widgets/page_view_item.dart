@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem({Key? key, this.title, this.subTitle, this.image})
@@ -15,28 +16,32 @@ class PageViewItem extends StatelessWidget {
         children: [
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.5,
-            child: Image.asset(image!),
+            child: Image.asset(
+              image!,
+            ),
           ),
           const Spacer(),
           Text(
             title!,
-            style: const TextStyle(
-                fontSize: 25, color: Colors.white, fontWeight: FontWeight.w600),
+            style: TextStyle(
+                fontSize: 25.sp,
+                color: Colors.white,
+                fontWeight: FontWeight.w600),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           Text(
             subTitle!,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 20,
+            style: TextStyle(
+              fontSize: 20.sp,
               color: Colors.white,
             ),
           ),
-          const SizedBox(
-            height: 30,
+          SizedBox(
+            height: 30.h,
           ),
           const Spacer(),
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomGenderContainer extends StatelessWidget {
   const CustomGenderContainer(
@@ -24,16 +25,16 @@ class CustomGenderContainer extends StatelessWidget {
           children: [
             Image.asset(
               image,
-              width: 80,
+              width: 70.w,
             ),
-            const SizedBox(
-              height: 15,
+            SizedBox(
+              height: 15.h,
             ),
             Text(
               title,
               style: TextStyle(
                 color: titleColor,
-                fontSize: 22,
+                fontSize: 22.sp,
                 fontWeight: FontWeight.w600,
               ),
             ),
