@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:jodel_app/views/onboarding_view/first_onboarding_view/first_onboarding_view.dart';
+import 'package:jodel_app/views/on_boarding/presentation/on_boarding_view.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -14,12 +14,8 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
-    Timer(
-        const Duration(seconds: 3),
-        () => Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => const FirstOnBoardingView())));
+    Timer(const Duration(seconds: 3),
+        () => Navigator.pushReplacementNamed(context, OnBoardingView.pageID));
   }
 
   @override
