@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:jodel_app/core/utils/constants.dart';
+import 'package:jodel_app/views/app_home_view/widgets/channels_view/channels_view.dart';
+import 'package:jodel_app/views/app_home_view/widgets/home_view/home_view.dart';
+import 'package:jodel_app/views/app_home_view/widgets/me_view/me_view.dart';
 
-import 'widgets/channels_view_body.dart';
-import 'widgets/home_view_body.dart';
-import 'widgets/inbox_view_body.dart';
-import 'widgets/me_view_body.dart';
+import 'widgets/inbox_view/inbox_view.dart';
 
 class AppHomeView extends StatefulWidget {
   const AppHomeView({super.key});
@@ -19,10 +19,10 @@ class _AppHomeViewState extends State<AppHomeView> {
   int pageIndex = 0;
 
   final pages = [
-    const HomePage(),
-    const ChannelsPage(),
-    const InboxPage(),
-    const MePage(),
+    const HomeView(),
+    const ChannelsView(),
+    const InboxView(),
+    const MeView(),
   ];
 
   @override

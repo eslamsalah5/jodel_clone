@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class InboxPage extends StatelessWidget {
-  const InboxPage({Key? key}) : super(key: key);
+class ChannelsViewBody extends StatelessWidget {
+  const ChannelsViewBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class InboxPage extends StatelessWidget {
       color: const Color(0xffC4DFCB),
       child: Center(
         child: Text(
-          "Page Number 3",
+          "Page Number 2",
           style: TextStyle(
             color: Colors.green[900],
             fontSize: 45,
