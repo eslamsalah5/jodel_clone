@@ -53,3 +53,27 @@ class InboxViewBody extends StatelessWidget {
     );
   }
 }
+
+// class InboxViewBody extends StatelessWidget {
+//   const InboxViewBody({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const TabBarView(
+//       children: [
+//         Column(
+//           children: [
+//             CustomNotificationContainer(),
+//             CustomNotificationContainer(),
+//           ],
+//         ),
+//         Column(
+//           children: [
+//             CustomChatContainer(),
+//             CustomChatContainer(),
+//           ],
+//         ),
+//       ],
+//     );
+//   }
+// }
