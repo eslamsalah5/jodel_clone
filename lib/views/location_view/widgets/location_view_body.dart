@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/generated/l10n.dart';
 import 'package:jodel_app/views/info_on_boarding_view/info_on_boarding.dart';
 
 class LocationViewBody extends StatelessWidget {
@@ -38,7 +39,7 @@ class LocationViewBody extends StatelessWidget {
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.95,
                         child: Text(
-                          'Jodel needs your location to connect You with the community around you',
+                           S.of(context).local_sub_title,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 20.sp,
@@ -62,8 +63,8 @@ class LocationViewBody extends StatelessWidget {
                               context, InfoOnBoardingView.pageID);
                         },
                         child: Text(
-                          'Allow Location',
-                          style: TextStyle(fontSize: 18.sp),
+                         S.of(context).allow_location,
+                          style: TextStyle(fontSize: 20.sp),
                         ),
                       ),
                     ],

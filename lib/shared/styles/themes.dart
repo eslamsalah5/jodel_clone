@@ -35,32 +35,32 @@ ThemeData darkTheme = ThemeData(
     ),
   ),
   textTheme: const TextTheme(
-    bodyMedium: TextStyle(
+    bodyText2: TextStyle(
       color: Colors.white,
     ),
-    titleLarge: TextStyle(
+    headline6: TextStyle(
       color: Colors.white,
     ),
-    displayLarge: TextStyle(
+    headline1: TextStyle(
       color: Colors.white,
     ),
-    displayMedium: TextStyle(
+    headline2: TextStyle(
       color: Colors.white,
     ),
-    displaySmall: TextStyle(
+    headline3: TextStyle(
       color: Colors.white,
     ),
-    headlineMedium: TextStyle(
+    headline4: TextStyle(
       color: Colors.white,
     ),
-    headlineSmall: TextStyle(
+    headline5: TextStyle(
       color: Colors.white,
     ),
-    bodyLarge: TextStyle(
+    bodyText1: TextStyle(
       fontSize: 18.0,
       color: Colors.white,
     ),
-    titleMedium: TextStyle(
+    subtitle1: TextStyle(
       fontSize: 14.0,
       fontWeight: FontWeight.w600,
       color: Colors.white,
@@ -128,11 +128,11 @@ ThemeData lightTheme = ThemeData(
     ),
   ),
   textTheme: const TextTheme(
-    bodyLarge: TextStyle(
+    bodyText1: TextStyle(
       fontSize: 18.0,
       color: Colors.black,
     ),
-    titleMedium: TextStyle(
+    subtitle1: TextStyle(
       fontSize: 14.0,
       fontWeight: FontWeight.w600,
       color: Colors.black,

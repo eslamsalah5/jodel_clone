@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jodel_app/core/utils/constants.dart';
+import 'package:jodel_app/generated/l10n.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/shared/styles/mode/state.dart';
 import 'package:jodel_app/views/app_home_view/widgets/channels_view/channels_view.dart';
@@ -40,7 +41,7 @@ class _AppHomeViewState extends State<AppHomeView> {
                 color: ModeCubit.get(context).isDark
                     ? const Color(0xff26252A)
                     : Colors.white,
-                borderRadius: const BorderRadius.only(
+                borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
@@ -80,8 +81,8 @@ class _AppHomeViewState extends State<AppHomeView> {
                             const SizedBox(
                               height: 3,
                             ),
-                            const Text(
-                              'Home',
+                             Text(
+                             S.of(context).home ,
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
@@ -125,8 +126,8 @@ class _AppHomeViewState extends State<AppHomeView> {
                             const SizedBox(
                               height: 3,
                             ),
-                            const Text(
-                              'Channels',
+                             Text(
+                              S.of(context).channels,
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
@@ -170,8 +171,8 @@ class _AppHomeViewState extends State<AppHomeView> {
                             const SizedBox(
                               height: 3,
                             ),
-                            const Text(
-                              'Inbox',
+                             Text(
+                             S.of(context).inbox,
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
@@ -215,8 +216,8 @@ class _AppHomeViewState extends State<AppHomeView> {
                             const SizedBox(
                               height: 3,
                             ),
-                            const Text(
-                              'Me',
+                             Text(
+                             S.of(context).me,
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,

@@ -6,6 +6,8 @@ import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/shared/styles/mode/state.dart';
 import 'package:jodel_app/views/app_home_view/widgets/inbox_view/widgets/inbox_view_body.dart';
 
+import '../../../../generated/l10n.dart';
+
 class InboxView extends StatelessWidget {
   const InboxView({Key? key}) : super(key: key);
 
@@ -61,7 +63,7 @@ class InboxView extends StatelessWidget {
                           height: 1.h,
                         ),
                         Text(
-                          'My Karma',
+                          S.of(context).my_karma,
                           style: TextStyle(
                             color: Colors.teal,
                             fontSize: 8.sp,
@@ -81,7 +83,7 @@ class InboxView extends StatelessWidget {
                   tabs: [
                     Tab(
                       child: Text(
-                        'NOTIFICATIONS',
+                       S.of(context).notifications,
                         style: TextStyle(
                           fontSize: 18.sp,
                         ),
@@ -89,7 +91,7 @@ class InboxView extends StatelessWidget {
                     ),
                     Tab(
                       child: Text(
-                        'CHAT',
+                        S.of(context).chat,
                         style: TextStyle(
                           fontSize: 18.sp,
                         ),

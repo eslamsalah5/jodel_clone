@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/generated/l10n.dart';
 import 'page_view_item.dart';
 
 class CustomPageView extends StatelessWidget {
@@ -13,21 +14,21 @@ class CustomPageView extends StatelessWidget {
       child: PageView(
         physics: const BouncingScrollPhysics(),
         controller: pageController,
-        children: const [
+        children:  [
           PageViewItem(
             image: 'assets/images/facebook.png',
-            title: 'Local',
-            subTitle: 'Instantly Chat with people around you',
+            title:  S.of(context).local_title,
+            subTitle:  S.of(context).local_sub_title,
           ),
           PageViewItem(
             image: 'assets/images/instagram.png',
-            title: 'Relevant',
-            subTitle: 'Explore communities that interest you',
+            title:  S.of(context).relevant_title,
+            subTitle:  S.of(context).relevant_sub_title,
           ),
           PageViewItem(
             image: 'assets/images/twitter.png',
-            title: 'Simple',
-            subTitle: 'Chat with other through text and image posts',
+            title:  S.of(context).simple_title,
+            subTitle:  S.of(context).simple_sub_title,
           ),
         ],
       ),

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/generated/l10n.dart';
 import 'package:jodel_app/shared/components/widgets/bloc_observe.dart';
 import 'package:jodel_app/shared/network/local/cache_helper.dart';
+import 'package:jodel_app/shared/styles/language_constant.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/shared/styles/mode/state.dart';
 import 'package:jodel_app/shared/styles/themes.dart';
@@ -23,11 +26,33 @@ Future<void> main() async {
   ));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   final bool? isDark;
   const MyApp({super.key, this.isDark});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+
+  static void setLocale(BuildContext context, Locale newLocale) {
+    _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
+    state?.setLocale(newLocale);
+  }
+}
+
+class _MyAppState extends State<MyApp> {
   // This widgets is the root of your application.
+  Locale? _locale;
+  setLocale(Locale locale) {
+    setState(() {
+      _locale = locale;
+    });
+  }
+
+  void didChangeDependencies() {
+    getLocale().then((locale) => {setLocale(locale)});
+    super.didChangeDependencies();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -35,7 +60,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(
             create: (context) => ModeCubit()
               ..changeAppMode(
-                fromShared: isDark,
+                fromShared: widget.isDark,
               ),
           ),
         ],
@@ -47,11 +72,19 @@ class MyApp extends StatelessWidget {
                 minTextAdapt: true,
                 splitScreenMode: true,
                 builder: (context, child) => MaterialApp(
+                  locale: _locale,
                   theme: lightTheme,
                   darkTheme: darkTheme,
                   themeMode: ModeCubit.get(context).isDark
                       ? ThemeMode.dark
                       : ThemeMode.light,
+                  localizationsDelegates: [
+                    S.delegate,
+                    GlobalMaterialLocalizations.delegate,
+                    GlobalWidgetsLocalizations.delegate,
+                    GlobalCupertinoLocalizations.delegate,
+                  ],
+                  supportedLocales: S.delegate.supportedLocales,
                   routes: {
                     SplashView.pageID: (context) => const SplashView(),
                     OnBoardingView.pageID: (context) => const OnBoardingView(),

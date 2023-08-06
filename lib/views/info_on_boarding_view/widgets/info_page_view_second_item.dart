@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/generated/l10n.dart';
 
 class InfoPageViewSecondItem extends StatelessWidget {
   const InfoPageViewSecondItem({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class InfoPageViewSecondItem extends StatelessWidget {
       children: [
         const Spacer(),
         Text(
-          'What is your Age?',
+           S.of(context).age_sub_title,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 22.sp,
@@ -43,7 +44,7 @@ class InfoPageViewSecondItem extends StatelessWidget {
               height: 15.h,
             ),
             Text(
-              'No one will see your age?',
+              S.of(context).age_Privacy,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 18.sp,
@@ -63,7 +64,7 @@ class InfoPageViewSecondItem extends StatelessWidget {
               ),
               onPressed: () {},
               child: Text(
-                'NEXT',
+                S.of(context).next,
                 style: TextStyle(fontSize: 20.sp),
               ),
             ),
@@ -71,7 +72,7 @@ class InfoPageViewSecondItem extends StatelessWidget {
               height: 22.h,
             ),
             Text(
-              'I confirm that my age is correct',
+              S.of(context).age_confirm,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 18.sp,

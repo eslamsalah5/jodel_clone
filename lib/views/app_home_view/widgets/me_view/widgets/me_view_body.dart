@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:jodel_app/generated/l10n.dart';
+import 'package:jodel_app/shared/components/components.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/shared/styles/mode/state.dart';
+import 'package:jodel_app/views/app_home_view/widgets/me_view/widgets/boosts_view/boosts_view.dart';
+import 'package:jodel_app/views/app_home_view/widgets/me_view/widgets/language_view.dart';
 class MeViewBody extends StatefulWidget {
   const MeViewBody({Key? key}) : super(key: key);
 
@@ -21,11 +25,11 @@ class _MeViewBodyState extends State<MeViewBody> {
               body: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Padding(
-                    padding: EdgeInsetsDirectional.only(start: 16),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.only(start: 16),
                     child: Text(
-                      'My Jodel',
-                      style: TextStyle(
+                      S.of(context).My_Jodels_title,
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
@@ -35,7 +39,7 @@ class _MeViewBodyState extends State<MeViewBody> {
                     margin: const EdgeInsetsDirectional.symmetric(
                         vertical: 16, horizontal: 12),
                     width: double.maxFinite - 32,
-                    height: 210,
+                    height: 240,
                     decoration: BoxDecoration(
                       color: ModeCubit.get(context).isDark
                           ? const Color(0xff26252A)
@@ -43,8 +47,10 @@ class _MeViewBodyState extends State<MeViewBody> {
                       borderRadius: BorderRadiusDirectional.circular(12),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.grey.withOpacity(0.25),
-                          spreadRadius: 5,
+                          color: ModeCubit.get(context).isDark
+                              ? Colors.grey.withOpacity(0.15)
+                              : Colors.grey.withOpacity(0.4),
+                          spreadRadius: 3,
                           blurRadius: 7,
                           offset:
                               const Offset(0, 3), // changes position of shadow
@@ -53,13 +59,13 @@ class _MeViewBodyState extends State<MeViewBody> {
                     ),
                     child: Column(
                       children: [
-                        settingItem(text: 'My Jodels'),
+                        settingItem(text: S.of(context).My_Jodels),
                         const Divider(
                           thickness: 2,
                         ),
-                        settingItem(
-                          text: 'Language',
-                        ),
+                        InkWell(
+                          onTap: () => navigateTo(context, Language_view()),
+                            child: settingItem(text: S.of(context).Language)),
                         const Divider(
                           thickness: 2,
                         ),
@@ -71,9 +77,9 @@ class _MeViewBodyState extends State<MeViewBody> {
                                 padding: EdgeInsetsDirectional.only(end: 8),
                                 child: Icon(Icons.dark_mode_outlined),
                               ),
-                              const Text(
-                                'Dark Mode',
-                                style: TextStyle(fontSize: 18),
+                              Text(
+                                S.of(context).dark_Mode,
+                                style: const TextStyle(fontSize: 18),
                               ),
                               const Spacer(),
                               Switch(
@@ -88,60 +94,66 @@ class _MeViewBodyState extends State<MeViewBody> {
                       ],
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsetsDirectional.symmetric(horizontal: 32,vertical: 8),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.symmetric(
+                        horizontal: 32, vertical: 8),
                     child: Text(
-                      'Powers',
-                      style: TextStyle(
+                      S.of(context).power,
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                   Center(
-                    child: Container(
-                      margin: const EdgeInsetsDirectional.symmetric(
-                          vertical: 16, horizontal: 12),
-                      width: MediaQuery.of(context).size.width * 0.8,
-                      height: 70,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            Color(0xff8274E7),
-                            Color(0xff3D8AF3),
+                    child: InkWell(
+                      onTap: () => navigateTo(context, const BoostsView()),
+                      child: Container(
+                        margin: const EdgeInsetsDirectional.symmetric(
+                            vertical: 16, horizontal: 12),
+                        width: MediaQuery.of(context).size.width * 0.8,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              Color(0xff8274E7),
+                              Color(0xff3D8AF3),
+                            ],
+                          ),
+                          borderRadius: BorderRadiusDirectional.circular(12),
+                          boxShadow: [
+                            BoxShadow(
+                              color: ModeCubit.get(context).isDark
+                                  ? Colors.grey.withOpacity(0.15)
+                                  : Colors.grey.withOpacity(0.4),
+                              spreadRadius: 5,
+                              blurRadius: 7,
+                              offset: const Offset(
+                                  0, 3), // changes position of shadow
+                            ),
                           ],
                         ),
-                        borderRadius: BorderRadiusDirectional.circular(12),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.25),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: const Offset(
-                                0, 3), // changes position of shadow
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.symmetric(
+                              vertical: 8),
+                          child: Column(
+                            children: [
+                              const Icon(
+                                Icons.rocket_launch,
+                                color: Colors.white,
+                                size: 32,
+                              ),
+                              Text(
+                                '0 ${S.of(context).Boosts}',
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
-                      child: const Padding(
-                        padding:
-                            EdgeInsetsDirectional.symmetric(vertical: 8),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.rocket_launch,
-                              color: Colors.white,
-                              size: 32,
-                            ),
-                            Text(
-                              '0 Boosts',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
                         ),
                       ),
                     ),

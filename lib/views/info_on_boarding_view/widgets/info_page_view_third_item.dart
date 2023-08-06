@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/generated/l10n.dart';
 
 import 'custom_user_group.dart';
 
@@ -12,7 +13,7 @@ class InfoPageViewThirdItem extends StatelessWidget {
       children: [
         const Spacer(),
         Text(
-          'Which user group best descripes you?',
+          S.of(context).group_sub_title,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 22.sp,
@@ -32,28 +33,28 @@ class InfoPageViewThirdItem extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  const Expanded(
+                   Expanded(
                     child: CustomUserGroupContainer(
                       image: 'assets/images/graduate.png',
-                      title: 'University Student',
+                      title:  S.of(context).university_student,
                     ),
                   ),
                   SizedBox(
                     width: 10.w,
                   ),
-                  const Expanded(
+                   Expanded(
                     child: CustomUserGroupContainer(
                       image: 'assets/images/bag.png',
-                      title: 'Emplyee',
+                      title:  S.of(context).emplyee,
                     ),
                   ),
                   SizedBox(
                     width: 10.w,
                   ),
-                  const Expanded(
+                   Expanded(
                     child: CustomUserGroupContainer(
                       image: 'assets/images/smile.png',
-                      title: 'Apprentice',
+                      title:  S.of(context).apprentice,
                     ),
                   ),
                 ],
@@ -63,28 +64,28 @@ class InfoPageViewThirdItem extends StatelessWidget {
               ),
               Row(
                 children: [
-                  const Expanded(
+                   Expanded(
                     child: CustomUserGroupContainer(
                       image: 'assets/images/school-bag.png',
-                      title: 'High School Graduate',
+                      title:  S.of(context).high_school_graduate,
                     ),
                   ),
                   SizedBox(
                     width: 10.w,
                   ),
-                  const Expanded(
+                   Expanded(
                     child: CustomUserGroupContainer(
                       image: 'assets/images/magician-hat.png',
-                      title: 'High School Student',
+                      title:  S.of(context).high_school_student,
                     ),
                   ),
                   SizedBox(
                     width: 10.w,
                   ),
-                  const Expanded(
+                   Expanded(
                     child: CustomUserGroupContainer(
                       image: 'assets/images/aliens.png',
-                      title: 'Other',
+                      title:  S.of(context).other,
                     ),
                   ),
                 ],
@@ -96,7 +97,7 @@ class InfoPageViewThirdItem extends StatelessWidget {
           flex: 3,
         ),
         Text(
-          'No one will see your user group',
+           S.of(context).gender_Privacy,
           style: TextStyle(
             fontSize: 18.sp,
             color: Colors.white,
