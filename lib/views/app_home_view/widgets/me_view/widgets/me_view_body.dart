@@ -124,10 +124,10 @@ class _MeViewBodyState extends State<MeViewBody> {
                           ),
                         ],
                       ),
-                      child: Padding(
+                      child: const Padding(
                         padding:
-                            const EdgeInsetsDirectional.symmetric(vertical: 8),
-                        child: const Column(
+                            EdgeInsetsDirectional.symmetric(vertical: 8),
+                        child: Column(
                           children: [
                             Icon(
                               Icons.rocket_launch,

@@ -17,6 +17,9 @@ class InboxView extends StatelessWidget {
           return DefaultTabController(
             length: 2,
             child: Scaffold(
+              backgroundColor: ModeCubit.get(context).isDark
+                  ? const Color(0xff26252A)
+                  : const Color(0xffF2F1F6),
               appBar: AppBar(
                 centerTitle: true,
                 elevation: 0,

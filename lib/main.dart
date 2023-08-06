@@ -18,7 +18,7 @@ Future<void> main() async {
   await CacheHelper.init();
 
   bool? isDark = CacheHelper.getData(key: 'isDark');
-  runApp( MyApp(
+  runApp(MyApp(
     isDark: isDark,
   ));
 }
@@ -48,10 +48,10 @@ class MyApp extends StatelessWidget {
                 splitScreenMode: true,
                 builder: (context, child) => MaterialApp(
                   theme: lightTheme,
-          darkTheme: darkTheme,
-          themeMode: ModeCubit.get(context).isDark
-              ? ThemeMode.dark 
-              : ThemeMode.light,
+                  darkTheme: darkTheme,
+                  themeMode: ModeCubit.get(context).isDark
+                      ? ThemeMode.dark
+                      : ThemeMode.light,
                   routes: {
                     SplashView.pageID: (context) => const SplashView(),
                     OnBoardingView.pageID: (context) => const OnBoardingView(),

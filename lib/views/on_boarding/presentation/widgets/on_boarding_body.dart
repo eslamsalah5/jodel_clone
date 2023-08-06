@@ -1,7 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:jodel_app/views/location_view/location_view.dart';
+import 'dart:io';
 
+import 'package:device_info_plus/device_info_plus.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'custom_page_view.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
@@ -21,6 +23,31 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         setState(() {});
       });
     super.initState();
+  }
+
+  String deviceName = '', deviceVersion = '', identifier = '';
+  Future<void> _getDeviceDetails() async {
+    final DeviceInfoPlugin deviceinfoplugin = DeviceInfoPlugin();
+
+    try {
+      if (Platform.isAndroid) {
+        var build = await deviceinfoplugin.androidInfo;
+        setState(() {
+          deviceName = build.model;
+          deviceVersion = build.version.toString();
+          identifier = build.id;
+        });
+      } else if (Platform.isIOS) {
+        var data = await deviceinfoplugin.iosInfo;
+        setState(() {
+          deviceName = data.name;
+          deviceVersion = data.systemVersion;
+          identifier = data.identifierForVendor!;
+        });
+      }
+    } on PlatformException {
+      print('Failed to get platform version');
+    }
   }
 
   @override
@@ -56,12 +83,12 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                           vertical: 14.h,
                         ),
                         onPressed: () {
-                          Navigator.pushReplacementNamed(
-                              context, LocationView.pageID);
+                          _getDeviceDetails();
+                          setState(() {});
                         },
                         child: Text(
                           'Start Now',
-                          style: TextStyle(fontSize: 20.sp),
+                          style: TextStyle(fontSize: 18.sp),
                         ),
                       ),
                       SizedBox(
@@ -71,7 +98,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                         width: MediaQuery.of(context).size.width * 0.9,
                         child: Text(
                           textAlign: TextAlign.center,
-                          'By clicking the bottom ,you agree to ourTerms of Use and Privacy Policy',
+                          'Device ID = $identifier',
                           style: TextStyle(
                             fontSize: 15.sp,
                             color: Colors.white,

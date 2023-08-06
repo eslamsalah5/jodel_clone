@@ -63,7 +63,7 @@ class LocationViewBody extends StatelessWidget {
                         },
                         child: Text(
                           'Allow Location',
-                          style: TextStyle(fontSize: 20.sp),
+                          style: TextStyle(fontSize: 18.sp),
                         ),
                       ),
                     ],

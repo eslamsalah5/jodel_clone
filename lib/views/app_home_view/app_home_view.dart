@@ -40,7 +40,7 @@ class _AppHomeViewState extends State<AppHomeView> {
                 color: ModeCubit.get(context).isDark
                     ? const Color(0xff26252A)
                     : Colors.white,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),

@@ -38,6 +38,7 @@ class CustomUserGroupContainer extends StatelessWidget {
                 title,
                 textAlign: TextAlign.center,
                 style: TextStyle(
+                  color: Colors.black,
                   fontSize: 15.sp,
                   fontWeight: FontWeight.w500,
                 ),
