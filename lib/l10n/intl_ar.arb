@@ -1,0 +1,63 @@
+{
+    "dark_Mode": "الوضع المظلم",
+    "Language": "اللغه",
+    "My_Jodels": "يوديلاتي",
+    "My_Jodels_title" : "قسمي",
+    "Boosts" : "تعزيزات",
+    "power" : "قوي اليودل بلص",
+
+
+    "me" : "حسابي",
+    "inbox" : "الواردات",
+    "channels" : "القنوات",
+    "home" : "الصفحه الرئيسيه",
+
+    "Boosts_jodels" : "تعزيز اليودلة",
+    "boost_sub_title" : "قم بشراء المزيد من أرصدة التعزيز لزيادة المشاركات في \nاعلي اليودلات لمدة 10 دقائق إضافية ",
+    "save" : "وفر",
+    "egp" : "ج.م.",
+    "each" : "للمره",
+    "most_popular" : "اكثر شعبيه",
+    "boost_now" : "عزز الان",
+
+    "my_karma" : "الكارما الخاصه بي",
+    "chat" : "محادثات خاصه",
+    "notifications" : "اشعارات",
+    "notifications_sub_title" : "ليس لديك إشعارات حاليا. كن مستخدما نشيطا لتلقي الاشعارات",
+    "chat_sub_title" : "مركز الدردشة الخاص بك فارغ الآن!",
+
+    "start_now" : "ابدا الان",
+    "privacy_Policy" : "بالنقر فوق الزر ، فإنك توافق على شروط الاستخدام وسياسة الخصوصية الخاصة بنا",
+    "local_title" : "محلي",
+    "local_sub_title" : "الدردشة على الفور مع الناس من حولك",
+
+    "relevant_title" : "مناسب",
+    "relevant_sub_title" : "استكشف المجتمعات التي تهمك",
+
+    "simple_title" : "بسيط",
+    "simple_sub_title" : "الدردشة مع الآخرين من خلال المشاركات النصية والصور",
+
+    "allow_location" : "السماح بالموقع",
+    "location_sub_title" : "يحتاج يوديل إلى موقعك لربطك بالمجتمع من حولك",
+
+    "gender_sub_title" : "إلى أي جنس تنتمي؟",
+    "male" : "ذكر",
+    "female" : "انثي",
+    "gender_Privacy" : "لن يرى أحد جنسك",
+
+    "age_sub_title" : "ما هو عمرك؟",
+    "age_Privacy" : "لا أحد سيرى عمرك؟",
+    "next" : "التالي",
+    "age_confirm" : "أؤكد أن عمري صحيح",
+
+    "group_sub_title" : "أي مجموعة تصفك على أفضل نحو؟",
+    "university_student" : "طالب جامعي", 
+    "emplyee" : "موظف",
+    "apprentice" : "حرفي",
+    "high_school_graduate" : "خريج الثانوية",
+    "high_school_student" : "طالب المدرسة الثانوية",
+    "other" : "آخر",
+    "group_Privacy" : "لن يرى أحد مجموعتك",
+
+    "change_Language" : "تغيير اللغه"
+}
