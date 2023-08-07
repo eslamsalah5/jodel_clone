@@ -19,11 +19,11 @@ class CommentTwetaBody extends StatelessWidget {
           ),
         ],
       ),
-      body: const SizedBox(
-        // color: Colors.cyanAccent,
+      body: Container(
+        color: Colors.cyanAccent,
         height: 300,
         width: 300,
-        child: Text(
+        child: const Text(
           "Comment",
           style: TextStyle(fontSize: 30),
         ),
