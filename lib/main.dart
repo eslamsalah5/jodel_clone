@@ -48,6 +48,7 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  @override
   void didChangeDependencies() {
     getLocale().then((locale) => {setLocale(locale)});
     super.didChangeDependencies();
@@ -78,7 +79,7 @@ class _MyAppState extends State<MyApp> {
                   themeMode: ModeCubit.get(context).isDark
                       ? ThemeMode.dark
                       : ThemeMode.light,
-                  localizationsDelegates: [
+                  localizationsDelegates: const [
                     S.delegate,
                     GlobalMaterialLocalizations.delegate,
                     GlobalWidgetsLocalizations.delegate,
