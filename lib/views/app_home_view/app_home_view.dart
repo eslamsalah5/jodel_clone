@@ -37,11 +37,11 @@ class _AppHomeViewState extends State<AppHomeView> {
           return Scaffold(
             bottomNavigationBar: Container(
               height: 70,
-              decoration:  BoxDecoration(
+              decoration: BoxDecoration(
                 color: ModeCubit.get(context).isDark
                     ? const Color(0xff26252A)
                     : Colors.white,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
@@ -74,16 +74,17 @@ class _AppHomeViewState extends State<AppHomeView> {
                                     ),
                                   )
                                 : Image.asset(
-                                  ModeCubit.get(context).isDark ?
-                                    'assets/images/white_jodel_icon.png' : 'assets/images/black_jodel_icon.png' ,
+                                    ModeCubit.get(context).isDark
+                                        ? 'assets/images/white_jodel_icon.png'
+                                        : 'assets/images/black_jodel_icon.png',
                                     width: 30,
                                   ),
                             const SizedBox(
                               height: 3,
                             ),
-                             Text(
-                             S.of(context).home ,
-                              style: TextStyle(
+                            Text(
+                              S.of(context).home,
+                              style: const TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -116,19 +117,19 @@ class _AppHomeViewState extends State<AppHomeView> {
                                       size: 30,
                                     ),
                                   )
-                                :  Icon(
+                                : Icon(
                                     Icons.search_rounded,
-                               color: ModeCubit.get(context).isDark
-                                   ? const Color(0xffBFBEC3)
-                                   : const Color(0xff414045),
+                                    color: ModeCubit.get(context).isDark
+                                        ? const Color(0xffBFBEC3)
+                                        : const Color(0xff414045),
                                     size: 30,
                                   ),
                             const SizedBox(
                               height: 3,
                             ),
-                             Text(
+                            Text(
                               S.of(context).channels,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -161,19 +162,19 @@ class _AppHomeViewState extends State<AppHomeView> {
                                       size: 30,
                                     ),
                                   )
-                                :  Icon(
+                                : Icon(
                                     Icons.notifications,
-                                  color: ModeCubit.get(context).isDark
-                                   ? const Color(0xffBFBEC3)
-                                   : const Color(0xff414045),
+                                    color: ModeCubit.get(context).isDark
+                                        ? const Color(0xffBFBEC3)
+                                        : const Color(0xff414045),
                                     size: 30,
                                   ),
                             const SizedBox(
                               height: 3,
                             ),
-                             Text(
-                             S.of(context).inbox,
-                              style: TextStyle(
+                            Text(
+                              S.of(context).inbox,
+                              style: const TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -206,19 +207,19 @@ class _AppHomeViewState extends State<AppHomeView> {
                                       size: 30,
                                     ),
                                   )
-                                :  Icon(
+                                : Icon(
                                     Icons.person,
-                                  color: ModeCubit.get(context).isDark
-                                   ? const Color(0xffBFBEC3)
-                                   : const Color(0xff414045),
+                                    color: ModeCubit.get(context).isDark
+                                        ? const Color(0xffBFBEC3)
+                                        : const Color(0xff414045),
                                     size: 30,
                                   ),
                             const SizedBox(
                               height: 3,
                             ),
-                             Text(
-                             S.of(context).me,
-                              style: TextStyle(
+                            Text(
+                              S.of(context).me,
+                              style: const TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
                               ),
