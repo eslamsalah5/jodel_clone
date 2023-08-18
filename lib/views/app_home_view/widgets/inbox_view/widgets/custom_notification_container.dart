@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/shared/styles/mode/cubit.dart';
 
 class CustomNotificationContainer extends StatelessWidget {
   const CustomNotificationContainer({super.key});
@@ -9,9 +10,22 @@ class CustomNotificationContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 8, left: 8, right: 8),
       child: Container(
-        decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(Radius.circular(10))),
+        decoration: BoxDecoration(
+          color: ModeCubit.get(context).isDark
+              ? const Color(0xff26252A)
+              : Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          boxShadow: [
+            BoxShadow(
+              color: ModeCubit.get(context).isDark
+                  ? Colors.black.withOpacity(0.2)
+                  : Colors.grey.withOpacity(0.4),
+              spreadRadius: 2,
+              blurRadius: 3,
+              offset: const Offset(0, 3), // changes position of shadow
+            ),
+          ],
+        ),
         child: Padding(
           padding: const EdgeInsets.all(15),
           child: Row(
@@ -30,7 +44,9 @@ class CustomNotificationContainer extends StatelessWidget {
                   Text(
                     'Reply to your Jodel',
                     style: TextStyle(
-                      color: Colors.grey[600],
+                      color: ModeCubit.get(context).isDark
+                          ? Colors.white70
+                          : Colors.grey[600],
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w600,
                     ),
@@ -38,7 +54,9 @@ class CustomNotificationContainer extends StatelessWidget {
                   Text(
                     'Who is here now!',
                     style: TextStyle(
-                      color: Colors.grey[600],
+                      color: ModeCubit.get(context).isDark
+                          ? Colors.white70
+                          : Colors.grey[600],
                       fontSize: 12.sp,
                     ),
                   ),
@@ -48,7 +66,9 @@ class CustomNotificationContainer extends StatelessWidget {
               Text(
                 '1d ago',
                 style: TextStyle(
-                  color: Colors.grey[600],
+                  color: ModeCubit.get(context).isDark
+                      ? Colors.white70
+                      : Colors.grey[600],
                   fontSize: 12.sp,
                 ),
               ),

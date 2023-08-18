@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allow_location":
             MessageLookupByLibrary.simpleMessage("Allow Location"),
         "apprentice": MessageLookupByLibrary.simpleMessage("Apprentice"),
+        "boost": MessageLookupByLibrary.simpleMessage("Boost"),
         "boost_now": MessageLookupByLibrary.simpleMessage("Boost now"),
         "boost_sub_title": MessageLookupByLibrary.simpleMessage(
             "Buy more Boost credits to boost posts to \n the top of everyones feed for for 10 \n additonal minutes "),
@@ -85,9 +86,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Explore communities that interest you"),
         "relevant_title": MessageLookupByLibrary.simpleMessage("Relevant"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "send_message_button":
+            MessageLookupByLibrary.simpleMessage("Send a new Massage"),
         "simple_sub_title": MessageLookupByLibrary.simpleMessage(
             "Chat with other through text and image posts"),
         "simple_title": MessageLookupByLibrary.simpleMessage("Simple"),
+        "soon": MessageLookupByLibrary.simpleMessage("SOON!"),
         "start_now": MessageLookupByLibrary.simpleMessage("Start Now"),
         "university_student":
             MessageLookupByLibrary.simpleMessage("University Student")

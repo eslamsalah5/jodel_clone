@@ -83,9 +83,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("استكشف المجتمعات التي تهمك"),
         "relevant_title": MessageLookupByLibrary.simpleMessage("مناسب"),
         "save": MessageLookupByLibrary.simpleMessage("وفر"),
+        "send_message_button":
+            MessageLookupByLibrary.simpleMessage("ارسل رساله جديده"),
         "simple_sub_title": MessageLookupByLibrary.simpleMessage(
             "الدردشة مع الآخرين من خلال المشاركات النصية والصور"),
         "simple_title": MessageLookupByLibrary.simpleMessage("بسيط"),
+        "soon": MessageLookupByLibrary.simpleMessage("قريبا!"),
         "start_now": MessageLookupByLibrary.simpleMessage("ابدا الان"),
         "university_student": MessageLookupByLibrary.simpleMessage("طالب جامعي")
       };

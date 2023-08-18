@@ -180,6 +180,16 @@ class S {
     );
   }
 
+  /// `Boost`
+  String get boost {
+    return Intl.message(
+      'Boost',
+      name: 'boost',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `EGP`
   String get egp {
     return Intl.message(
@@ -530,11 +540,31 @@ class S {
     );
   }
 
+  /// `Send a new Massage`
+  String get send_message_button {
+    return Intl.message(
+      'Send a new Massage',
+      name: 'send_message_button',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `change Language`
   String get change_Language {
     return Intl.message(
       'change Language',
       name: 'change_Language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SOON!`
+  String get soon {
+    return Intl.message(
+      'SOON!',
+      name: 'soon',
       desc: '',
       args: [],
     );
