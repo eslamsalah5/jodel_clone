@@ -33,6 +33,7 @@ class _AppHomeViewState extends State<AppHomeView> {
         listener: (context, state) {},
         builder: (context, state) {
           return Scaffold(
+            // bottomNavigationBar
             bottomNavigationBar: Container(
               height: 70,
               decoration: BoxDecoration(
