@@ -97,7 +97,7 @@ class InfoPageViewThirdItem extends StatelessWidget {
           flex: 3,
         ),
         Text(
-           S.of(context).gender_Privacy,
+           S.of(context).group_Privacy,
           style: TextStyle(
             fontSize: 18.sp,
             color: Colors.white,
