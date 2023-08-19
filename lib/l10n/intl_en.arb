@@ -50,5 +50,7 @@
     "group_Privacy": "No one will see your user group",
     "send_message_button": "Send a new Massage",
     "change_Language": "change Language",
-    "soon": "SOON!"
+    "soon": "SOON!",
+    "comment_text_form_hint": "Jodel back here..."
+
 }
