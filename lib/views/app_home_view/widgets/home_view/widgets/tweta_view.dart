@@ -5,8 +5,11 @@ import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/comment_
 import '../../../../../shared/styles/mode/cubit.dart';
 
 class TwetaView extends StatelessWidget {
-  const TwetaView({super.key});
+  const TwetaView({super.key, this.color, this.titel});
 
+  final Color? color;
+
+  final String? titel;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
