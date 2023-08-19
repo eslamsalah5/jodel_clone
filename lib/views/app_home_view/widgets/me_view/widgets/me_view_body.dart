@@ -5,7 +5,9 @@ import 'package:jodel_app/shared/components/components.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/shared/styles/mode/state.dart';
 import 'package:jodel_app/views/app_home_view/widgets/me_view/widgets/boosts_view/boosts_view.dart';
-import 'package:jodel_app/views/app_home_view/widgets/me_view/widgets/language_view.dart';
+import 'package:jodel_app/views/app_home_view/widgets/me_view/widgets/jodel_view/jodel_view.dart';
+import 'package:jodel_app/views/app_home_view/widgets/me_view/widgets/laguage_view/language_view.dart';
+
 class MeViewBody extends StatefulWidget {
   const MeViewBody({Key? key}) : super(key: key);
 
@@ -48,7 +50,7 @@ class _MeViewBodyState extends State<MeViewBody> {
                       boxShadow: [
                         BoxShadow(
                           color: ModeCubit.get(context).isDark
-                              ? Colors.grey.withOpacity(0.15)
+                              ? Colors.black.withOpacity(0.2)
                               : Colors.grey.withOpacity(0.4),
                           spreadRadius: 3,
                           blurRadius: 7,
@@ -59,12 +61,14 @@ class _MeViewBodyState extends State<MeViewBody> {
                     ),
                     child: Column(
                       children: [
-                        settingItem(text: S.of(context).My_Jodels),
+                        InkWell(
+                            onTap: () => navigateTo(context, JodelView()),
+                            child: settingItem(text: S.of(context).My_Jodels)),
                         const Divider(
                           thickness: 2,
                         ),
                         InkWell(
-                          onTap: () => navigateTo(context, Language_view()),
+                            onTap: () => navigateTo(context, LanguageView()),
                             child: settingItem(text: S.of(context).Language)),
                         const Divider(
                           thickness: 2,

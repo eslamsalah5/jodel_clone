@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 
-class CustomNotificationContainer extends StatelessWidget {
-  const CustomNotificationContainer({super.key});
+class ChatRequest extends StatelessWidget {
+  const ChatRequest({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class CustomNotificationContainer extends StatelessWidget {
           color: ModeCubit.get(context).isDark
               ? const Color(0xff26252A)
               : Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
           boxShadow: [
             BoxShadow(
               color: ModeCubit.get(context).isDark
@@ -29,7 +29,7 @@ class CustomNotificationContainer extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(15),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
                 'assets/images/pink-jodel.png',
@@ -42,7 +42,7 @@ class CustomNotificationContainer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Reply to your Jodel',
+                    'User wants to chat with you',
                     style: TextStyle(
                       color: ModeCubit.get(context).isDark
                           ? Colors.white70
@@ -51,14 +51,45 @@ class CustomNotificationContainer extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  Text(
-                    'Who is here now!',
-                    style: TextStyle(
-                      color: ModeCubit.get(context).isDark
-                          ? Colors.white70
-                          : Colors.grey[600],
-                      fontSize: 12.sp,
-                    ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  Row(
+                    children: [
+                      MaterialButton(
+                        onPressed: () {},
+                        color: Colors.green[400],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Text(
+                          'Accept',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 12.w,
+                      ),
+                      MaterialButton(
+                        onPressed: () {},
+                        color: Colors.red[400],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Text(
+                          'Deny',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                 ],
               ),

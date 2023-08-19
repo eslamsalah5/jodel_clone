@@ -4,7 +4,6 @@ import 'package:jodel_app/core/utils/constants.dart';
 import 'package:jodel_app/generated/l10n.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/shared/styles/mode/state.dart';
-import 'package:jodel_app/views/app_home_view/widgets/channels_view/channels_view.dart';
 import 'package:jodel_app/views/app_home_view/widgets/home_view/home_view.dart';
 import 'package:jodel_app/views/app_home_view/widgets/me_view/me_view.dart';
 
@@ -24,7 +23,6 @@ class _AppHomeViewState extends State<AppHomeView> {
 
   final pages = [
     const HomeView(),
-    const ChannelsView(),
     const InboxView(),
     const MeView(),
   ];
@@ -35,6 +33,7 @@ class _AppHomeViewState extends State<AppHomeView> {
         listener: (context, state) {},
         builder: (context, state) {
           return Scaffold(
+            // bottomNavigationBar
             bottomNavigationBar: Container(
               height: 70,
               decoration: BoxDecoration(
@@ -109,51 +108,6 @@ class _AppHomeViewState extends State<AppHomeView> {
                                     decoration: const BoxDecoration(
                                       borderRadius:
                                           BorderRadius.all(Radius.circular(30)),
-                                      color: Colors.red,
-                                    ),
-                                    child: const Icon(
-                                      Icons.search_rounded,
-                                      color: Colors.white,
-                                      size: 30,
-                                    ),
-                                  )
-                                : Icon(
-                                    Icons.search_rounded,
-                                    color: ModeCubit.get(context).isDark
-                                        ? const Color(0xffBFBEC3)
-                                        : const Color(0xff414045),
-                                    size: 30,
-                                  ),
-                            const SizedBox(
-                              height: 3,
-                            ),
-                            Text(
-                              S.of(context).channels,
-                              style: const TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ]),
-                    ),
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          pageIndex = 2;
-                        });
-                      },
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            pageIndex == 2
-                                ? Container(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 15, vertical: 3),
-                                    decoration: const BoxDecoration(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(30)),
                                       color: Colors.teal,
                                     ),
                                     child: const Icon(
@@ -186,13 +140,13 @@ class _AppHomeViewState extends State<AppHomeView> {
                     child: GestureDetector(
                       onTap: () {
                         setState(() {
-                          pageIndex = 3;
+                          pageIndex = 2;
                         });
                       },
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            pageIndex == 3
+                            pageIndex == 2
                                 ? Container(
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 15, vertical: 3),
