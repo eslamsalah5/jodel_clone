@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jodel_app/views/app_home_view/widgets/inbox_view/widgets/chat_request.dart';
 
 import 'custom_chat_container.dart';
 import 'custom_notification_container.dart';
@@ -66,6 +67,7 @@ class InboxViewBody extends StatelessWidget {
           children: [
             CustomNotificationContainer(),
             CustomNotificationContainer(),
+            ChatRequest(),
           ],
         ),
         Column(
