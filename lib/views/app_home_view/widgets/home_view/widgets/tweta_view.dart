@@ -3,9 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/comment_tweta_body.dart';
 
 class TwetaView extends StatelessWidget {
-  const TwetaView({super.key, this.color, this.titel});
-  final Color? color;
-  final String? titel;
+  const TwetaView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

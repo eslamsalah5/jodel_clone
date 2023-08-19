@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:jodel_app/views/app_home_view/widgets/home_view/home_coment_tweta.dart';
+import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/text_fild_comment.dart';
 
 class CommentTwetaBody extends StatelessWidget {
   const CommentTwetaBody({super.key});
@@ -19,14 +21,16 @@ class CommentTwetaBody extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        color: Colors.cyanAccent,
-        height: 300,
-        width: 300,
-        child: const Text(
-          "Comment",
-          style: TextStyle(fontSize: 30),
-        ),
+      body: const Stack(
+        children: [
+          HomeCommentTweta(),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              TextFieldComments(),
+            ],
+          )
+        ],
       ),
     );
   }
