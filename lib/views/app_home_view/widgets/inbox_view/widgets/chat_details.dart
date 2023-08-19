@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../../shared/styles/mode/cubit.dart';
 
+// ignore: must_be_immutable
 class ChatDetailsScreen extends StatelessWidget {
   ChatDetailsScreen({
     Key? key,
@@ -26,7 +27,7 @@ class ChatDetailsScreen extends StatelessWidget {
           children: [
             Expanded(
                 child: ListView(
-               physics: BouncingScrollPhysics(),
+              physics: BouncingScrollPhysics(),
               children: [
                 buildMyMassage(),
                 buildMassage(),
@@ -38,6 +39,11 @@ class ChatDetailsScreen extends StatelessWidget {
                 buildMassage(),
                 buildMyMassage(),
                 buildMyMassage(),
+                buildMyMassage(),
+                buildMassage(),
+                buildMyMassage(),
+                buildMassage(),
+                buildMassage(),
                 buildMyMassage(),
               ],
             )),
@@ -174,7 +180,7 @@ class TooltipSample extends StatelessWidget {
         ],
       ),
       height: 50,
-      triggerMode: TooltipTriggerMode.longPress ,
+      triggerMode: TooltipTriggerMode.longPress,
       padding: const EdgeInsets.all(8.0),
       preferBelow: false,
       textStyle: const TextStyle(

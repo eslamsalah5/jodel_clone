@@ -569,6 +569,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Jodel back here...`
+  String get comment_text_form_hint {
+    return Intl.message(
+      'Jodel back here...',
+      name: 'comment_text_form_hint',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
