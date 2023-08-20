@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/core/utils/constants.dart';
 import 'package:jodel_app/shared/components/components.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/views/app_home_view/widgets/inbox_view/widgets/chat_details.dart';
@@ -36,7 +37,7 @@ class CustomChatContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset(
-                  'assets/images/pink-jodel.png',
+                 logoImage,
                   width: 35,
                 ),
                 const SizedBox(

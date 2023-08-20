@@ -15,7 +15,7 @@ class MeViewBody extends StatefulWidget {
   State<MeViewBody> createState() => _MeViewBodyState();
 }
 
-bool val = true;
+bool val = false;
 
 class _MeViewBodyState extends State<MeViewBody> {
   @override
@@ -91,7 +91,9 @@ class _MeViewBodyState extends State<MeViewBody> {
                                 value: val,
                                 onChanged: (value) {
                                   ModeCubit.get(context).changeAppMode();
-                                  val = value;
+                                  ModeCubit.get(context).isDark
+                                      ? val = true
+                                      : val = false;
                                 },
                               ),
                             ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/core/utils/constants.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../../shared/styles/mode/cubit.dart';
 
@@ -90,7 +91,7 @@ Widget buildMassage() => Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Image.asset(
-              'assets/images/pink-jodel.png',
+              logoImage,
               width: 35.w,
             ),
             SizedBox(
@@ -145,7 +146,7 @@ Widget buildMyMassage() => Column(
               width: 12.w,
             ),
             Image.asset(
-              'assets/images/pink-jodel.png',
+              logoImage,
               width: 35.w,
             ),
           ],

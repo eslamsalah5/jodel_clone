@@ -68,14 +68,16 @@ class _AppHomeViewState extends State<AppHomeView> {
                                       color: kPrimaryColor,
                                     ),
                                     child: Image.asset(
-                                      'assets/images/white_jodel_icon.png',
+                                      logoImage,
+                                      color: Colors.white,
                                       width: 30,
                                     ),
                                   )
                                 : Image.asset(
-                                    ModeCubit.get(context).isDark
-                                        ? 'assets/images/white_jodel_icon.png'
-                                        : 'assets/images/black_jodel_icon.png',
+                                    logoImage,
+                                    color: ModeCubit.get(context).isDark
+                                        ? const Color(0xffBFBEC3)
+                                        : const Color(0xff414045),
                                     width: 30,
                                   ),
                             const SizedBox(
