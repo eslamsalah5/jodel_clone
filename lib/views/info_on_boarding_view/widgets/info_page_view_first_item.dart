@@ -34,21 +34,23 @@ class InfoPageViewFirstItem extends StatelessWidget {
             children: [
               Row(
                 children: [
-                   Expanded(
+                  Expanded(
                     child: CustomGenderContainer(
-                      image: 'assets/images/pink-jodel.png',
-                      title:  S.of(context).female,
+                      image: logoImage,
+                      title: S.of(context).female,
                       titleColor: pinkJodel,
+                      imageColor: Colors.pink,
                     ),
                   ),
                   SizedBox(
                     width: 40.w,
                   ),
-                   Expanded(
+                  Expanded(
                     child: CustomGenderContainer(
-                      image: 'assets/images/blue-jodel.png',
-                      title:  S.of(context).male,
+                      image: logoImage,
+                      title: S.of(context).male,
                       titleColor: blueJodel,
+                      imageColor: Colors.blue,
                     ),
                   ),
                 ],

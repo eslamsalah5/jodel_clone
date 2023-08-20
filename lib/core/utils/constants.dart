@@ -12,3 +12,6 @@ const Color kWhiteColor = Colors.white;
 
 const grayColor = Color(0xffBFBEC3);
 const purpleColor = Color(0xffBCBDF6);
+const cyanColor = Colors.cyan;
+
+const String logoImage = "assets/images/logo.png";
