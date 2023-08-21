@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/core/utils/constants.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 
 class CustomNotificationContainer extends StatelessWidget {
@@ -32,7 +33,7 @@ class CustomNotificationContainer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
-                'assets/images/pink-jodel.png',
+                logoImage,
                 width: 35,
               ),
               const SizedBox(

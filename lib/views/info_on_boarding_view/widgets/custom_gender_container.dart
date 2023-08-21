@@ -6,9 +6,11 @@ class CustomGenderContainer extends StatelessWidget {
       {super.key,
       required this.image,
       required this.title,
-      required this.titleColor});
+      required this.titleColor,
+      required this.imageColor});
 
   final String image;
+  final Color imageColor;
   final String title;
   final Color titleColor;
 
@@ -26,6 +28,7 @@ class CustomGenderContainer extends StatelessWidget {
             Image.asset(
               image,
               width: 70.w,
+              color: imageColor,
             ),
             SizedBox(
               height: 15.h,

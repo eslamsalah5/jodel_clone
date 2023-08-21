@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:jodel_app/core/utils/constants.dart';
 import 'package:jodel_app/views/on_boarding/presentation/on_boarding_view.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -20,11 +21,13 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
-      'assets/images/splash.jpeg',
-      fit: BoxFit.cover,
-      width: double.infinity,
-      height: double.infinity,
+    return Center(
+      child: Image.asset(
+        logoImage,
+        fit: BoxFit.contain,
+        width: MediaQuery.of(context).size.width * .7,
+        height: MediaQuery.of(context).size.height * .7,
+      ),
     );
   }
 }

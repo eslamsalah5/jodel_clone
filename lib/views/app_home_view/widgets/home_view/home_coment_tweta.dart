@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/tweta_comment.dart';
+import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/tweta_view.dart';
 
 import 'widgets/commentes.dart';
 
@@ -21,20 +23,19 @@ class _HomeCommentTwetaState extends State<HomeCommentTweta> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TwetaComment(
-          titel: ico.length.toString(),
-        ),
+        TwetaView(),
         Container(
           color: Colors.white,
           child: const Divider(
-            height: 03,
+            height: 01,
           ),
         ),
         Expanded(
           child: ListView.builder(
+            physics: BouncingScrollPhysics(),
             itemCount: 4,
             itemBuilder: (context, index) {
-              return Commentes(icon: ico[index]);
+              return TwetaView();
             },
           ),
         )

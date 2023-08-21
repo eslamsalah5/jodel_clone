@@ -49,5 +49,6 @@
     "group_Privacy": "لن يرى أحد مجموعتك",
     "send_message_button": "ارسل رساله جديده",
     "change_Language": "تغيير اللغه",
-    "soon": "قريبا!"
+    "soon": "قريبا!",
+    "comment_text_form_hint": "ردود ايجابيه فقط!#"
 }

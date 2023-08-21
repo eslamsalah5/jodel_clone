@@ -46,6 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "chat": MessageLookupByLibrary.simpleMessage("CHAT"),
         "chat_sub_title": MessageLookupByLibrary.simpleMessage(
             "Your Chat center is empty Now!"),
+        "comment_text_form_hint":
+            MessageLookupByLibrary.simpleMessage("Jodel back here..."),
         "dark_Mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "each": MessageLookupByLibrary.simpleMessage("each"),
         "egp": MessageLookupByLibrary.simpleMessage("EGP"),

@@ -24,7 +24,7 @@ class TwetaView extends StatelessWidget {
       child: Card(
         color: ModeCubit.get(context).isDark
             ? const Color(0xff26252A)
-            : Colors.blueAccent,
+            : Colors.cyan,
         elevation: 20,
         child: Column(
           children: [

@@ -21,9 +21,9 @@ class CommentTwetaBody extends StatelessWidget {
           ),
         ],
       ),
-      body: const Stack(
+      body: const Column(
         children: [
-          HomeCommentTweta(),
+          Expanded(child: HomeCommentTweta()),
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [

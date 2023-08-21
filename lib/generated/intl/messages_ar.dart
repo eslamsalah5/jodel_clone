@@ -43,6 +43,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "chat": MessageLookupByLibrary.simpleMessage("محادثات خاصه"),
         "chat_sub_title": MessageLookupByLibrary.simpleMessage(
             "مركز الدردشة الخاص بك فارغ الآن!"),
+        "comment_text_form_hint":
+            MessageLookupByLibrary.simpleMessage("ردود ايجابيه فقط!#"),
         "dark_Mode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
         "each": MessageLookupByLibrary.simpleMessage("للمره"),
         "egp": MessageLookupByLibrary.simpleMessage("ج.م."),

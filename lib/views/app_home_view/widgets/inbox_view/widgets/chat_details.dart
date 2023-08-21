@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/core/utils/constants.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../../shared/styles/mode/cubit.dart';
 
+// ignore: must_be_immutable
 class ChatDetailsScreen extends StatelessWidget {
   ChatDetailsScreen({
     Key? key,
@@ -26,7 +28,7 @@ class ChatDetailsScreen extends StatelessWidget {
           children: [
             Expanded(
                 child: ListView(
-               physics: BouncingScrollPhysics(),
+              physics: BouncingScrollPhysics(),
               children: [
                 buildMyMassage(),
                 buildMassage(),
@@ -38,6 +40,11 @@ class ChatDetailsScreen extends StatelessWidget {
                 buildMassage(),
                 buildMyMassage(),
                 buildMyMassage(),
+                buildMyMassage(),
+                buildMassage(),
+                buildMyMassage(),
+                buildMassage(),
+                buildMassage(),
                 buildMyMassage(),
               ],
             )),
@@ -84,7 +91,7 @@ Widget buildMassage() => Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Image.asset(
-              'assets/images/pink-jodel.png',
+              logoImage,
               width: 35.w,
             ),
             SizedBox(
@@ -139,7 +146,7 @@ Widget buildMyMassage() => Column(
               width: 12.w,
             ),
             Image.asset(
-              'assets/images/pink-jodel.png',
+              logoImage,
               width: 35.w,
             ),
           ],
@@ -174,7 +181,7 @@ class TooltipSample extends StatelessWidget {
         ],
       ),
       height: 50,
-      triggerMode: TooltipTriggerMode.longPress ,
+      triggerMode: TooltipTriggerMode.longPress,
       padding: const EdgeInsets.all(8.0),
       preferBelow: false,
       textStyle: const TextStyle(
