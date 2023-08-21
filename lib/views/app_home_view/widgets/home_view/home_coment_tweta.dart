@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/tweta_comment.dart';
-import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/tweta_view.dart';
 
 import 'widgets/commentes.dart';
 

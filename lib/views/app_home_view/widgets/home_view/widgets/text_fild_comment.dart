@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jodel_app/core/utils/constants.dart';
-import 'package:jodel_app/generated/l10n.dart';
-import 'package:jodel_app/shared/styles/mode/cubit.dart';
 
 class TextFieldComments extends StatefulWidget {
   const TextFieldComments({super.key});
