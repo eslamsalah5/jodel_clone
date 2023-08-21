@@ -13,11 +13,14 @@ class TwetaComment extends StatelessWidget {
           Row(
             children: [
               // IconButton list
-              IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.more_horiz,
-                  size: 30.sp,
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.more_horiz,
+                    size: 30.sp,
+                  ),
                 ),
               ),
 
@@ -36,61 +39,64 @@ class TwetaComment extends StatelessWidget {
               ),
             ],
           ),
-          Row(
-            children: [
-              Expanded(
-                  flex: 4,
-                  child: Column(
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          maxLines: 5,
-                          "فيه حد g mgkedf hert hkrte jreh jrthj rt r jt wjer gjew  meg e mekrgm ",
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontSize: 20,
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: Row(
+              children: [
+                Expanded(
+                    flex: 4,
+                    child: Column(
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            maxLines: 5,
+                            "فيه حد g mgkedf hert hkrte jreh jrthj rt r jt wjer gjew  meg e mekrgm ",
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
                           ),
                         ),
-                      ),
 
-                      /// icon comment
-                      Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.comment),
-                          ),
-                          Text(titel.toString()),
-                        ],
+                        /// icon comment
+                        Row(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.comment),
+                            ),
+                            Text(titel.toString()),
+                          ],
+                        ),
+                      ],
+                    )),
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      InkWell(
+                        // icon arrow_drop_up
+                        onTap: () {},
+                        child:
+                            Icon(Icons.keyboard_arrow_up_outlined, size: 50.sp),
+                      ),
+                      Text(
+                        "0",
+                        style: TextStyle(
+                          fontSize: 20.sp,
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Icon(Icons.keyboard_arrow_down_outlined,
+                            size: 50.sp),
                       ),
                     ],
-                  )),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    InkWell(
-                      // icon arrow_drop_up
-                      onTap: () {},
-                      child:
-                          Icon(Icons.keyboard_arrow_up_outlined, size: 50.sp),
-                    ),
-                    Text(
-                      "0",
-                      style: TextStyle(
-                        fontSize: 20.sp,
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child:
-                          Icon(Icons.keyboard_arrow_down_outlined, size: 50.sp),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

@@ -14,20 +14,23 @@ class _TextFieldCommentsState extends State<TextFieldComments> {
   @override
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
-    return TextFormField(
-      controller: user,
-      decoration: InputDecoration(
-          border: const OutlineInputBorder(),
-          hintText: '#!ردود ايجابيه فقط',
-          filled: true,
-          fillColor: Colors.white70,
-          hintMaxLines: 2,
-          hintStyle: const TextStyle(
-            fontSize: 25,
-          ),
-          suffixIcon:
-              IconButton(onPressed: () {}, icon: const Icon(Icons.camera_alt)),
-          suffixIconColor: Colors.black),
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: TextFormField(
+        controller: user,
+        decoration: InputDecoration(
+            border: const OutlineInputBorder(),
+            hintText: '#!ردود ايجابيه فقط',
+            filled: true,
+            fillColor: Colors.white70,
+            hintMaxLines: 2,
+            hintStyle: const TextStyle(
+              fontSize: 25,
+            ),
+            suffixIcon: IconButton(
+                onPressed: () {}, icon: const Icon(Icons.camera_alt)),
+            suffixIconColor: Colors.black),
+      ),
     );
   }
 }

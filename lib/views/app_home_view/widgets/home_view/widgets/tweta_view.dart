@@ -40,9 +40,8 @@ class TwetaView extends StatelessWidget {
                     size: 12,
                   ),
                 ),
-                Expanded(
-                  child: Container(
-                      child: const Row(
+                const Expanded(
+                  child: Row(
                     children: [
                       Text(
                         "El Shorouk City",
@@ -51,13 +50,16 @@ class TwetaView extends StatelessWidget {
                         " . 1min",
                       ),
                     ],
-                  )),
+                  ),
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.more_horiz,
-                    size: 30.sp,
+                Padding(
+                  padding: const EdgeInsets.only(right: 15),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.more_horiz,
+                      size: 30.sp,
+                    ),
                   ),
                 ),
               ],

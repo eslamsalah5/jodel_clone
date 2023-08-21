@@ -13,11 +13,14 @@ class Commentes extends StatelessWidget {
           Row(
             children: [
               // IconButton list
-              IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.more_horiz,
-                  size: 30.sp,
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.more_horiz,
+                    size: 30.sp,
+                  ),
                 ),
               ),
 
@@ -66,48 +69,54 @@ class Commentes extends StatelessWidget {
               ),
             ],
           ),
-          Row(
-            children: [
-              const Expanded(
-                flex: 4,
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: 85),
-                  child: Text(
-                    textAlign: TextAlign.end,
-                    maxLines: 3,
-                    "فيه حد ف مادنتي  ",
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 20,
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: Row(
+              children: [
+                const Expanded(
+                  flex: 4,
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 85),
+                    child: Text(
+                      textAlign: TextAlign.end,
+                      maxLines: 3,
+                      "فيه حد ف مادنتي  ",
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    InkWell(
-                      // icon arrow_drop_up
-                      onTap: () {},
-                      child:
-                          Icon(Icons.keyboard_arrow_up_outlined, size: 50.sp),
+                Directionality(
+                  textDirection: TextDirection.ltr,
+                  child: Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        InkWell(
+                          // icon arrow_drop_up
+                          onTap: () {},
+                          child: Icon(Icons.keyboard_arrow_up_outlined,
+                              size: 50.sp),
+                        ),
+                        Text(
+                          "0",
+                          style: TextStyle(
+                            fontSize: 20.sp,
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {},
+                          child: Icon(Icons.keyboard_arrow_down_outlined,
+                              size: 50.sp),
+                        ),
+                      ],
                     ),
-                    Text(
-                      "0",
-                      style: TextStyle(
-                        fontSize: 20.sp,
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child:
-                          Icon(Icons.keyboard_arrow_down_outlined, size: 50.sp),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
