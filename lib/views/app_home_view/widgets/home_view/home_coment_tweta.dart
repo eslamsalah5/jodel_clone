@@ -23,7 +23,7 @@ class _HomeCommentTwetaState extends State<HomeCommentTweta> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TwetaView(),
+        const TwetaComment(titel: "4"),
         Container(
           color: Colors.white,
           child: const Divider(
@@ -32,10 +32,12 @@ class _HomeCommentTwetaState extends State<HomeCommentTweta> {
         ),
         Expanded(
           child: ListView.builder(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             itemCount: 4,
             itemBuilder: (context, index) {
-              return TwetaView();
+              return Commentes(
+                icon: ico[index],
+              );
             },
           ),
         )
