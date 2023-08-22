@@ -39,7 +39,7 @@ class LocationViewBody extends StatelessWidget {
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.95,
                         child: Text(
-                           S.of(context).local_sub_title,
+                           S.of(context).location_sub_title,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 20.sp,

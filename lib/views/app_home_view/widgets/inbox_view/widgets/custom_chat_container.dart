@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jodel_app/core/utils/constants.dart';
+import 'package:jodel_app/generated/l10n.dart';
 import 'package:jodel_app/shared/components/components.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/views/app_home_view/widgets/inbox_view/widgets/chat_details.dart';
@@ -37,7 +38,7 @@ class CustomChatContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset(
-                 logoImage,
+                  logoImage,
                   width: 35,
                 ),
                 const SizedBox(
@@ -46,15 +47,29 @@ class CustomChatContainer extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Private chat with @2',
-                      style: TextStyle(
-                        color: ModeCubit.get(context).isDark
-                            ? Colors.white70
-                            : Colors.grey[600],
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w600,
-                      ),
+                    Row(
+                      children: [
+                        Text(
+                          S.of(context).chat_receive,
+                          style: TextStyle(
+                            color: ModeCubit.get(context).isDark
+                                ? Colors.white70
+                                : Colors.grey[600],
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Text(
+                          '@2',
+                          style: TextStyle(
+                            color: ModeCubit.get(context).isDark
+                                ? Colors.white70
+                                : Colors.grey[600],
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
                     ),
                     Text(
                       'Who is here now!',
@@ -87,14 +102,27 @@ class CustomChatContainer extends StatelessWidget {
                   ],
                 ),
                 const Spacer(),
-                Text(
-                  '1d ago',
-                  style: TextStyle(
-                    color: ModeCubit.get(context).isDark
-                        ? Colors.white70
-                        : Colors.grey[600],
-                    fontSize: 12.sp,
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      '1d ',
+                      style: TextStyle(
+                        color: ModeCubit.get(context).isDark
+                            ? Colors.white70
+                            : Colors.grey[600],
+                        fontSize: 12.sp,
+                      ),
+                    ),
+                    Text(
+                      S.of(context).ago,
+                      style: TextStyle(
+                        color: ModeCubit.get(context).isDark
+                            ? Colors.white70
+                            : Colors.grey[600],
+                        fontSize: 12.sp,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

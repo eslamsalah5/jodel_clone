@@ -11,7 +11,7 @@ class JodelViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).My_Jodels),
+        title: Text(S.of(context).My_X),
         titleSpacing: 2.sp,
       ),
       body: SingleChildScrollView(

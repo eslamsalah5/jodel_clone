@@ -23,16 +23,18 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Boosts": MessageLookupByLibrary.simpleMessage("Boosts"),
-        "Boosts_jodels": MessageLookupByLibrary.simpleMessage("Boosts"),
+        "Boosts_X": MessageLookupByLibrary.simpleMessage("Boosts"),
         "Language": MessageLookupByLibrary.simpleMessage("Language"),
-        "My_Jodels": MessageLookupByLibrary.simpleMessage("My Jodels"),
-        "My_Jodels_title": MessageLookupByLibrary.simpleMessage("My Jodels"),
+        "My_X": MessageLookupByLibrary.simpleMessage("My X"),
+        "My_X_title": MessageLookupByLibrary.simpleMessage("My X"),
+        "accept": MessageLookupByLibrary.simpleMessage("Accept"),
         "age_Privacy":
             MessageLookupByLibrary.simpleMessage("No one will see your age?"),
         "age_confirm": MessageLookupByLibrary.simpleMessage(
             "I confirm that my age is correct"),
         "age_sub_title":
             MessageLookupByLibrary.simpleMessage("What is your Age?"),
+        "ago": MessageLookupByLibrary.simpleMessage("ago"),
         "allow_location":
             MessageLookupByLibrary.simpleMessage("Allow Location"),
         "apprentice": MessageLookupByLibrary.simpleMessage("Apprentice"),
@@ -44,11 +46,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("change Language"),
         "channels": MessageLookupByLibrary.simpleMessage("Channels"),
         "chat": MessageLookupByLibrary.simpleMessage("CHAT"),
+        "chat_receive":
+            MessageLookupByLibrary.simpleMessage("Private chat with "),
+        "chat_request":
+            MessageLookupByLibrary.simpleMessage("User wants to chat with you"),
         "chat_sub_title": MessageLookupByLibrary.simpleMessage(
             "Your Chat center is empty Now!"),
         "comment_text_form_hint":
-            MessageLookupByLibrary.simpleMessage("Jodel back here..."),
+            MessageLookupByLibrary.simpleMessage("X back here..."),
         "dark_Mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "deny": MessageLookupByLibrary.simpleMessage("Deny"),
         "each": MessageLookupByLibrary.simpleMessage("each"),
         "egp": MessageLookupByLibrary.simpleMessage("EGP"),
         "emplyee": MessageLookupByLibrary.simpleMessage("Emplyee"),
@@ -71,15 +78,17 @@ class MessageLookup extends MessageLookupByLibrary {
             "Instantly Chat with people around you"),
         "local_title": MessageLookupByLibrary.simpleMessage("local"),
         "location_sub_title": MessageLookupByLibrary.simpleMessage(
-            "Jodel needs your location to connect You with the community around you"),
+            "X needs your location to connect You with the community around you"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
         "me": MessageLookupByLibrary.simpleMessage("Me"),
         "most_popular": MessageLookupByLibrary.simpleMessage("most Popular"),
         "my_karma": MessageLookupByLibrary.simpleMessage("My Karma"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "notification_receive":
+            MessageLookupByLibrary.simpleMessage("Reply to your X"),
         "notifications": MessageLookupByLibrary.simpleMessage("NOTIFICATIONS"),
         "notifications_sub_title": MessageLookupByLibrary.simpleMessage(
-            "You have no Jodel notifications right now. Get active to recieve notifications"),
+            "You have no X notifications right now. Get active to recieve notifications"),
         "other": MessageLookupByLibrary.simpleMessage("Other"),
         "power": MessageLookupByLibrary.simpleMessage("Power"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage(

@@ -23,29 +23,35 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Boosts": MessageLookupByLibrary.simpleMessage("تعزيزات"),
-        "Boosts_jodels": MessageLookupByLibrary.simpleMessage("تعزيز اليودلة"),
+        "Boosts_X": MessageLookupByLibrary.simpleMessage("تعزيز الاكس"),
         "Language": MessageLookupByLibrary.simpleMessage("اللغه"),
-        "My_Jodels": MessageLookupByLibrary.simpleMessage("يوديلاتي"),
-        "My_Jodels_title": MessageLookupByLibrary.simpleMessage("قسمي"),
+        "My_X": MessageLookupByLibrary.simpleMessage("يوديلاتي"),
+        "My_X_title": MessageLookupByLibrary.simpleMessage("قسمي"),
+        "accept": MessageLookupByLibrary.simpleMessage("موافق"),
         "age_Privacy":
             MessageLookupByLibrary.simpleMessage("لا أحد سيرى عمرك؟"),
         "age_confirm":
             MessageLookupByLibrary.simpleMessage("أؤكد أن عمري صحيح"),
         "age_sub_title": MessageLookupByLibrary.simpleMessage("ما هو عمرك؟"),
+        "ago": MessageLookupByLibrary.simpleMessage("منذ"),
         "allow_location":
             MessageLookupByLibrary.simpleMessage("السماح بالموقع"),
         "apprentice": MessageLookupByLibrary.simpleMessage("حرفي"),
         "boost_now": MessageLookupByLibrary.simpleMessage("عزز الان"),
         "boost_sub_title": MessageLookupByLibrary.simpleMessage(
-            "قم بشراء المزيد من أرصدة التعزيز لزيادة المشاركات في \nاعلي اليودلات لمدة 10 دقائق إضافية "),
+            "قم بشراء المزيد من أرصدة التعزيز لزيادة المشاركات في \nالاعلي لمدة 10 دقائق إضافية "),
         "change_Language": MessageLookupByLibrary.simpleMessage("تغيير اللغه"),
         "channels": MessageLookupByLibrary.simpleMessage("القنوات"),
         "chat": MessageLookupByLibrary.simpleMessage("محادثات خاصه"),
+        "chat_receive": MessageLookupByLibrary.simpleMessage("دردشة خاصة مع "),
+        "chat_request":
+            MessageLookupByLibrary.simpleMessage("يريد المستخدم الدردشة معك"),
         "chat_sub_title": MessageLookupByLibrary.simpleMessage(
             "مركز الدردشة الخاص بك فارغ الآن!"),
         "comment_text_form_hint":
             MessageLookupByLibrary.simpleMessage("ردود ايجابيه فقط!#"),
         "dark_Mode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
+        "deny": MessageLookupByLibrary.simpleMessage("ارفض"),
         "each": MessageLookupByLibrary.simpleMessage("للمره"),
         "egp": MessageLookupByLibrary.simpleMessage("ج.م."),
         "emplyee": MessageLookupByLibrary.simpleMessage("موظف"),
@@ -68,17 +74,19 @@ class MessageLookup extends MessageLookupByLibrary {
             "الدردشة على الفور مع الناس من حولك"),
         "local_title": MessageLookupByLibrary.simpleMessage("محلي"),
         "location_sub_title": MessageLookupByLibrary.simpleMessage(
-            "يحتاج يوديل إلى موقعك لربطك بالمجتمع من حولك"),
+            "يحتاج اكس إلى موقعك لربطك بالمجتمع من حولك"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "me": MessageLookupByLibrary.simpleMessage("حسابي"),
         "most_popular": MessageLookupByLibrary.simpleMessage("اكثر شعبيه"),
         "my_karma": MessageLookupByLibrary.simpleMessage("الكارما الخاصه بي"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "notification_receive":
+            MessageLookupByLibrary.simpleMessage("الرد على اكس الخاص بك"),
         "notifications": MessageLookupByLibrary.simpleMessage("اشعارات"),
         "notifications_sub_title": MessageLookupByLibrary.simpleMessage(
             "ليس لديك إشعارات حاليا. كن مستخدما نشيطا لتلقي الاشعارات"),
         "other": MessageLookupByLibrary.simpleMessage("آخر"),
-        "power": MessageLookupByLibrary.simpleMessage("قوي اليودل بلص"),
+        "power": MessageLookupByLibrary.simpleMessage("قوي اكس بلص"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage(
             "بالنقر فوق الزر ، فإنك توافق على شروط الاستخدام وسياسة الخصوصية الخاصة بنا"),
         "relevant_sub_title":

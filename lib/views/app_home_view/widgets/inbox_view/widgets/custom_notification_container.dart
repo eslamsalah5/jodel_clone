@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jodel_app/core/utils/constants.dart';
+import 'package:jodel_app/generated/l10n.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 
 class CustomNotificationContainer extends StatelessWidget {
@@ -43,7 +44,7 @@ class CustomNotificationContainer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Reply to your Jodel',
+                    S.of(context).notification_receive,
                     style: TextStyle(
                       color: ModeCubit.get(context).isDark
                           ? Colors.white70
@@ -64,14 +65,27 @@ class CustomNotificationContainer extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-              Text(
-                '1d ago',
-                style: TextStyle(
-                  color: ModeCubit.get(context).isDark
-                      ? Colors.white70
-                      : Colors.grey[600],
-                  fontSize: 12.sp,
-                ),
+             Row(
+                children: [
+                  Text(
+                    '1d ',
+                    style: TextStyle(
+                      color: ModeCubit.get(context).isDark
+                          ? Colors.white70
+                          : Colors.grey[600],
+                      fontSize: 12.sp,
+                    ),
+                  ),
+                  Text(
+                    S.of(context).ago,
+                    style: TextStyle(
+                      color: ModeCubit.get(context).isDark
+                          ? Colors.white70
+                          : Colors.grey[600],
+                      fontSize: 12.sp,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
