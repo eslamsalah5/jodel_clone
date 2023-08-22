@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Boosts": MessageLookupByLibrary.simpleMessage("تعزيزات"),
         "Boosts_X": MessageLookupByLibrary.simpleMessage("تعزيز الاكس"),
         "Language": MessageLookupByLibrary.simpleMessage("اللغه"),
-        "My_X": MessageLookupByLibrary.simpleMessage("يوديلاتي"),
+        "My_X": MessageLookupByLibrary.simpleMessage("تكساتى"),
         "My_X_title": MessageLookupByLibrary.simpleMessage("قسمي"),
         "accept": MessageLookupByLibrary.simpleMessage("موافق"),
         "age_Privacy":
