@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jodel_app/views/app_home_view/widgets/home_view/imge.dart';
 import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/tweta_view.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -12,8 +13,9 @@ class HomeViewBody extends StatelessWidget {
         child: Column(
           children: [
             TwetaView(),
+            ImageTweta(),
             TwetaView(),
-            TwetaView(),
+            ImageTweta(),
             TwetaView(),
           ],
         ),
