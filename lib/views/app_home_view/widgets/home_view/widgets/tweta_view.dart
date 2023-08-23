@@ -79,11 +79,38 @@ class _TwetaViewState extends State<TwetaView> {
                         child: Row(
                           children: [
                             ///////////
-                            const Icon(Icons.delete),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Icon(Icons.delete),
+                            ),
 
                             Container(
                               margin: const EdgeInsets.only(left: 10),
                               child: const Text("delete"),
+                            ),
+                          ],
+                        ),
+                      ),
+                      PopupMenuItem(
+                        onTap: () async {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('boost'),
+                            ),
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            ///////////
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child:
+                                  Icon(Icons.phone_bluetooth_speaker_outlined),
+                            ),
+
+                            Container(
+                              margin: const EdgeInsets.only(left: 10),
+                              child: const Text("boost"),
                             ),
                           ],
                         ),
