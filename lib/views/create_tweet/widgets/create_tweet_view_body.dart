@@ -44,26 +44,28 @@ class _CreateTweetViewBodyState extends State<CreateTweetViewBody> {
           padding: const EdgeInsets.symmetric(horizontal: 18),
           child: Column(
             children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.40,
-                child: TextField(
-                  maxLines: 10,
-                  autofocus: true,
-                  cursorColor: Colors.white,
-                  style: TextStyle(
-                      fontSize: 23.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white),
-                  decoration: InputDecoration(
-                      border: InputBorder.none,
-                      focusedBorder: InputBorder.none,
-                      enabledBorder: InputBorder.none,
-                      hintText: 'Share Your thoughts with the whole world',
-                      hintStyle: TextStyle(
-                        fontSize: 20.sp,
+              Expanded(
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.40,
+                  child: TextField(
+                    maxLines: 10,
+                    autofocus: true,
+                    cursorColor: Colors.white,
+                    style: TextStyle(
+                        fontSize: 23.sp,
                         fontWeight: FontWeight.w400,
-                        color: Colors.white.withOpacity(0.6),
-                      )),
+                        color: Colors.white),
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        focusedBorder: InputBorder.none,
+                        enabledBorder: InputBorder.none,
+                        hintText: 'Share Your thoughts with the whole world',
+                        hintStyle: TextStyle(
+                          fontSize: 20.sp,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white.withOpacity(0.6),
+                        )),
+                  ),
                 ),
               ),
               const Spacer(),
