@@ -31,7 +31,7 @@ class _MeViewBodyState extends State<MeViewBody> {
                   Padding(
                     padding: const EdgeInsetsDirectional.only(start: 16),
                     child: Text(
-                      S.of(context).My_Jodels_title,
+                      S.of(context).My_X_title,
                       style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class _MeViewBodyState extends State<MeViewBody> {
                       children: [
                         InkWell(
                             onTap: () => navigateTo(context, JodelView()),
-                            child: settingItem(text: S.of(context).My_Jodels)),
+                            child: settingItem(text: S.of(context).My_X)),
                         const Divider(
                           thickness: 2,
                         ),

@@ -26,7 +26,7 @@ class _BoostsViewBodyState extends State<BoostsViewBody> {
           size: 32.sp,
         ),
         Text(
-          S.of(context).Boosts_jodels,
+          S.of(context).Boosts_X,
           style: TextStyle(
               color: const Color(0xffBCBDF6),
               fontSize: 18.sp,

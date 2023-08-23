@@ -70,21 +70,21 @@ class S {
     );
   }
 
-  /// `My Jodels`
-  String get My_Jodels {
+  /// `My X`
+  String get My_X {
     return Intl.message(
-      'My Jodels',
-      name: 'My_Jodels',
+      'My X',
+      name: 'My_X',
       desc: '',
       args: [],
     );
   }
 
-  /// `My Jodels`
-  String get My_Jodels_title {
+  /// `My X`
+  String get My_X_title {
     return Intl.message(
-      'My Jodels',
-      name: 'My_Jodels_title',
+      'My X',
+      name: 'My_X_title',
       desc: '',
       args: [],
     );
@@ -151,10 +151,10 @@ class S {
   }
 
   /// `Boosts`
-  String get Boosts_jodels {
+  String get Boosts_X {
     return Intl.message(
       'Boosts',
-      name: 'Boosts_jodels',
+      name: 'Boosts_X',
       desc: '',
       args: [],
     );
@@ -260,10 +260,10 @@ class S {
     );
   }
 
-  /// `You have no Jodel notifications right now. Get active to recieve notifications`
+  /// `You have no X notifications right now. Get active to recieve notifications`
   String get notifications_sub_title {
     return Intl.message(
-      'You have no Jodel notifications right now. Get active to recieve notifications',
+      'You have no X notifications right now. Get active to recieve notifications',
       name: 'notifications_sub_title',
       desc: '',
       args: [],
@@ -370,10 +370,10 @@ class S {
     );
   }
 
-  /// `Jodel needs your location to connect You with the community around you`
+  /// `X needs your location to connect You with the community around you`
   String get location_sub_title {
     return Intl.message(
-      'Jodel needs your location to connect You with the community around you',
+      'X needs your location to connect You with the community around you',
       name: 'location_sub_title',
       desc: '',
       args: [],
@@ -570,11 +570,71 @@ class S {
     );
   }
 
-  /// `Jodel back here...`
+  /// `X back here...`
   String get comment_text_form_hint {
     return Intl.message(
-      'Jodel back here...',
+      'X back here...',
       name: 'comment_text_form_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User wants to chat with you`
+  String get chat_request {
+    return Intl.message(
+      'User wants to chat with you',
+      name: 'chat_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Accept`
+  String get accept {
+    return Intl.message(
+      'Accept',
+      name: 'accept',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Deny`
+  String get deny {
+    return Intl.message(
+      'Deny',
+      name: 'deny',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ago`
+  String get ago {
+    return Intl.message(
+      'ago',
+      name: 'ago',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reply to your X`
+  String get notification_receive {
+    return Intl.message(
+      'Reply to your X',
+      name: 'notification_receive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Private chat with `
+  String get chat_receive {
+    return Intl.message(
+      'Private chat with ',
+      name: 'chat_receive',
       desc: '',
       args: [],
     );

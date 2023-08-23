@@ -17,6 +17,7 @@ class _HomeCommentTwetaState extends State<HomeCommentTweta> {
     const Icon(Icons.accessibility_sharp),
     const Icon(Icons.adobe)
   ];
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -31,7 +32,7 @@ class _HomeCommentTwetaState extends State<HomeCommentTweta> {
         Expanded(
           child: ListView.builder(
             physics: const BouncingScrollPhysics(),
-            itemCount: 4,
+            itemCount: ico.length,
             itemBuilder: (context, index) {
               return Commentes(
                 icon: ico[index],

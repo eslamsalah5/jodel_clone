@@ -4,12 +4,19 @@ import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/comment_
 
 import '../../../../../shared/styles/mode/cubit.dart';
 
-class TwetaView extends StatelessWidget {
+class TwetaView extends StatefulWidget {
   const TwetaView({super.key, this.color, this.titel});
 
   final Color? color;
-
   final String? titel;
+
+  @override
+  State<TwetaView> createState() => _TwetaViewState();
+}
+
+class _TwetaViewState extends State<TwetaView> {
+  int es = 0;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -54,12 +61,34 @@ class TwetaView extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 15),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
+                  child: PopupMenuButton(
+                    icon: const Icon(
                       Icons.more_horiz,
-                      size: 30.sp,
+                      size: 35,
                     ),
+                    offset: const Offset(0, 40),
+                    itemBuilder: (context) => [
+                      PopupMenuItem(
+                        onTap: () async {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('delete'),
+                            ),
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            ///////////
+                            const Icon(Icons.delete),
+
+                            Container(
+                              margin: const EdgeInsets.only(left: 10),
+                              child: const Text("delete"),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -88,18 +117,28 @@ class TwetaView extends StatelessWidget {
                       children: [
                         InkWell(
                           // icon arrow_drop_up
-                          onTap: () {},
+                          onTap: () {
+                            if (es < 3) {
+                              es++;
+                            }
+                            setState(() {});
+                          },
                           child: Icon(Icons.keyboard_arrow_up_outlined,
                               size: 50.sp),
                         ),
                         Text(
-                          "0",
+                          es.toString(),
                           style: TextStyle(
                             fontSize: 20.sp,
                           ),
                         ),
                         InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            if (es >= 1) {
+                              es--;
+                            }
+                            setState(() {});
+                          },
                           child: Icon(Icons.keyboard_arrow_down_outlined,
                               size: 50.sp),
                         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jodel_app/core/utils/constants.dart';
+import 'package:jodel_app/generated/l10n.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 
 class ChatRequest extends StatelessWidget {
@@ -43,7 +44,7 @@ class ChatRequest extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'User wants to chat with you',
+                    S.of(context).chat_request,
                     style: TextStyle(
                       color: ModeCubit.get(context).isDark
                           ? Colors.white70
@@ -64,7 +65,7 @@ class ChatRequest extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text(
-                          'Accept',
+                          S.of(context).accept,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15.sp,
@@ -82,7 +83,7 @@ class ChatRequest extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text(
-                          'Deny',
+                          S.of(context).deny,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15.sp,
@@ -95,14 +96,27 @@ class ChatRequest extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-              Text(
-                '1d ago',
-                style: TextStyle(
-                  color: ModeCubit.get(context).isDark
-                      ? Colors.white70
-                      : Colors.grey[600],
-                  fontSize: 12.sp,
-                ),
+              Row(
+                children: [
+                  Text(
+                    '1d ',
+                    style: TextStyle(
+                      color: ModeCubit.get(context).isDark
+                          ? Colors.white70
+                          : Colors.grey[600],
+                      fontSize: 12.sp,
+                    ),
+                  ),
+                  Text(
+                    S.of(context).ago,
+                    style: TextStyle(
+                      color: ModeCubit.get(context).isDark
+                          ? Colors.white70
+                          : Colors.grey[600],
+                      fontSize: 12.sp,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

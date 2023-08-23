@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Commentes extends StatelessWidget {
-  const Commentes({super.key, required this.icon});
+  const Commentes({
+    super.key,
+    required this.icon,
+  });
   final Icon icon;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -12,31 +16,6 @@ class Commentes extends StatelessWidget {
         children: [
           Row(
             children: [
-              // IconButton list
-              Padding(
-                padding: const EdgeInsets.only(right: 15),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.more_horiz,
-                    size: 30.sp,
-                  ),
-                ),
-              ),
-
-              //
-              Expanded(
-                child: Container(
-                  padding: const EdgeInsets.only(right: 5),
-                  child: const Text("1د .", textAlign: TextAlign.right),
-                ),
-              ),
-              const Text("El Shorouk City"),
-              const Icon(Icons.location_on),
-              const Text("1"),
-              const SizedBox(
-                width: 6,
-              ),
               IconButton(
                   onPressed: () {
                     ///  show Modal Bottom Sheet
@@ -64,8 +43,53 @@ class Commentes extends StatelessWidget {
                     );
                   },
                   icon: icon),
-              const SizedBox(
-                width: 10,
+              const Icon(
+                Icons.location_on,
+                size: 15,
+              ),
+              const Expanded(
+                child: Row(
+                  children: [
+                    Text(
+                      "El Shorouk City",
+                    ),
+                    Text(
+                      " . 1min",
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: PopupMenuButton(
+                  icon: const Icon(
+                    Icons.more_horiz,
+                    size: 35,
+                  ),
+                  offset: const Offset(0, 40),
+                  itemBuilder: (context) => [
+                    PopupMenuItem(
+                      onTap: () async {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('delete'),
+                          ),
+                        );
+                      },
+                      child: Row(
+                        children: [
+                          ///////////
+                          const Icon(Icons.delete),
+
+                          Container(
+                            margin: const EdgeInsets.only(left: 10),
+                            child: const Text("delete"),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
