@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jodel_app/views/create_tweet/create_tweet_view.dart';
 
 class floatingHomeButtom extends StatelessWidget {
   const floatingHomeButtom({super.key});
@@ -19,7 +20,9 @@ class floatingHomeButtom extends StatelessWidget {
             ),
             child: InkWell(
               borderRadius: BorderRadius.circular(500.0),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, CreateTweetView.pageID);
+              },
               child: const Icon(
                 Icons.add,
                 size: 40,

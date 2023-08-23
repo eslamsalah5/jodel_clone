@@ -61,7 +61,7 @@ class _AppHomeViewState extends State<AppHomeView> {
                             pageIndex == 0
                                 ? Container(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 15, vertical: 3),
+                                        horizontal: 11, vertical: 6),
                                     decoration: const BoxDecoration(
                                       borderRadius:
                                           BorderRadius.all(Radius.circular(30)),
@@ -152,10 +152,10 @@ class _AppHomeViewState extends State<AppHomeView> {
                                 ? Container(
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 15, vertical: 3),
-                                    decoration: BoxDecoration(
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(30)),
-                                      color: Colors.blue[700],
+                                    decoration: const BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(30)),
+                                      color: Colors.orange,
                                     ),
                                     child: const Icon(
                                       Icons.person,

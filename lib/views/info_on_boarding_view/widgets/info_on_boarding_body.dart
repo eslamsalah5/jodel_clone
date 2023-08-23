@@ -25,7 +25,7 @@ class _InfoOnBoardingViewBodyState extends State<InfoOnBoardingViewBody> {
     return Stack(
       children: [
         Image.asset(
-          'assets/images/background.jpg',
+          'assets/images/blue_background.jpg',
           fit: BoxFit.cover,
           width: double.infinity,
           height: double.infinity,

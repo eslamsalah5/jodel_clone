@@ -10,6 +10,7 @@ import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/shared/styles/mode/state.dart';
 import 'package:jodel_app/shared/styles/themes.dart';
 import 'package:jodel_app/views/app_home_view/app_home_view.dart';
+import 'package:jodel_app/views/create_tweet/create_tweet_view.dart';
 import 'package:jodel_app/views/info_on_boarding_view/info_on_boarding.dart';
 import 'package:jodel_app/views/location_view/location_view.dart';
 import 'package:jodel_app/views/on_boarding/presentation/on_boarding_view.dart';
@@ -93,6 +94,8 @@ class _MyAppState extends State<MyApp> {
                     InfoOnBoardingView.pageID: (context) =>
                         const InfoOnBoardingView(),
                     AppHomeView.pageID: (context) => const AppHomeView(),
+                    CreateTweetView.pageID: (context) =>
+                        const CreateTweetView(),
                   },
                   initialRoute: SplashView.pageID,
                   debugShowCheckedModeBanner: false,

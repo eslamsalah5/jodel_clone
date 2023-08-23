@@ -6,7 +6,7 @@ const Color blueJodel = Color(0xff05A1CB);
 
 const Color orangeJodel = Color(0xffFA7E0A);
 
-const Color kPrimaryColor = Color(0xffFA7E0A);
+const Color kPrimaryColor = Color(0xff1d8fff);
 
 const Color kWhiteColor = Colors.white;
 

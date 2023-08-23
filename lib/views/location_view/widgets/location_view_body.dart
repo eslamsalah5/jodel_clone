@@ -11,7 +11,7 @@ class LocationViewBody extends StatelessWidget {
     return Stack(
       children: [
         Image.asset(
-          'assets/images/background.jpg',
+          'assets/images/blue_background.jpg',
           fit: BoxFit.cover,
           width: double.infinity,
           height: double.infinity,
@@ -39,7 +39,7 @@ class LocationViewBody extends StatelessWidget {
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.95,
                         child: Text(
-                           S.of(context).local_sub_title,
+                          S.of(context).local_sub_title,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 20.sp,
@@ -63,7 +63,7 @@ class LocationViewBody extends StatelessWidget {
                               context, InfoOnBoardingView.pageID);
                         },
                         child: Text(
-                         S.of(context).allow_location,
+                          S.of(context).allow_location,
                           style: TextStyle(fontSize: 20.sp),
                         ),
                       ),

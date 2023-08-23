@@ -21,13 +21,23 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Image.asset(
-        logoImage,
-        fit: BoxFit.contain,
-        width: MediaQuery.of(context).size.width * .7,
-        height: MediaQuery.of(context).size.height * .7,
-      ),
+    return Stack(
+      children: [
+        Image.asset(
+          'assets/images/blue_background.jpg',
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.cover,
+        ),
+        Center(
+          child: Image.asset(
+            logoImage,
+            fit: BoxFit.contain,
+            width: MediaQuery.of(context).size.width * .6,
+            height: MediaQuery.of(context).size.height * .6,
+          ),
+        ),
+      ],
     );
   }
 }
