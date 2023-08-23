@@ -57,8 +57,12 @@
     "deny": "Deny",
     "ago": "ago",
     "notification_receive": "Reply to your X",
-    "chat_receive": "Private chat with "
-
+    "chat_receive": "Private chat with ",
+    "create_tweet_hint": "Share Your thoughts with the whole world",
+    "close": "CLOSE",
+    "Confirm_chat_request": "Would you like to send a private chat request to ",
+    "delete": "Delete",
+    "send_chat_request_button": "Send request"
 
 
 }

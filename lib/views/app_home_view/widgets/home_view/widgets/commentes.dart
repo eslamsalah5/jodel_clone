@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/generated/l10n.dart';
+import 'package:jodel_app/shared/styles/mode/cubit.dart';
 
 class Commentes extends StatelessWidget {
   const Commentes({
@@ -11,7 +13,8 @@ class Commentes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blueGrey,
+      color:
+          ModeCubit.get(context).isDark ? const Color(0xff26252A) : Colors.cyan,
       child: Column(
         children: [
           Row(
@@ -20,22 +23,36 @@ class Commentes extends StatelessWidget {
                   onPressed: () {
                     ///  show Modal Bottom Sheet
                     showModalBottomSheet(
+                      backgroundColor: ModeCubit.get(context).isDark
+                          ? const Color(0xff26252A)
+                          : Colors.white,
                       context: context,
                       builder: (context) {
-                        return const SizedBox(
+                        return SizedBox(
                           height: 130,
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Column(children: [
-                              Text(
-                                "هل ترغب في ارسال صلب محادثه خاصه الي @1",
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 17),
+                              Row(
+                                children: [
+                                  Text(
+                                    S.of(context).Confirm_chat_request,
+                                    style: const TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  const Text(
+                                    " @1",
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 15,
                               ),
-                              CustomButton()
+                              const CustomButton()
                             ]),
                           ),
                         );
@@ -62,17 +79,37 @@ class Commentes extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 15),
                 child: PopupMenuButton(
-                  icon: const Icon(
+                  color: ModeCubit.get(context).isDark
+                      ? const Color(0xff26252A)
+                      : Colors.white,
+                  icon: Icon(
                     Icons.more_horiz,
                     size: 35,
+                    color: ModeCubit.get(context).isDark
+                        ? Colors.white
+                        : const Color(
+                            0xff26252A,
+                          ),
                   ),
                   offset: const Offset(0, 40),
                   itemBuilder: (context) => [
                     PopupMenuItem(
                       onTap: () async {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('delete'),
+                          SnackBar(
+                            backgroundColor: ModeCubit.get(context).isDark
+                                ? const Color(0xff26252A)
+                                : Colors.white,
+                            content: Text(S.of(context).delete,
+                                style: TextStyle(
+                                  color: ModeCubit.get(context).isDark
+                                      ? Colors.white
+                                      : const Color(
+                                          0xff26252A,
+                                        ),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                )),
                           ),
                         );
                       },
@@ -83,7 +120,7 @@ class Commentes extends StatelessWidget {
 
                           Container(
                             margin: const EdgeInsets.only(left: 10),
-                            child: const Text("delete"),
+                            child: Text(S.of(context).delete),
                           ),
                         ],
                       ),
@@ -164,13 +201,12 @@ class CustomButton extends StatelessWidget {
         ),
         width: double.infinity,
         height: 60,
-        child: const Padding(
-          padding: EdgeInsets.only(top: 15),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 15),
           child: Text(
             textAlign: TextAlign.center,
-            'ارسل الطلب',
-            style: TextStyle(
-              color: Colors.white,
+            S.of(context).send_chat_request_button,
+            style: const TextStyle(
               fontSize: 19,
               fontWeight: FontWeight.bold,
             ),

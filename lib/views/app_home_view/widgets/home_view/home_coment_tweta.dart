@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/tweta_comment.dart';
 
 import 'widgets/commentes.dart';
@@ -24,9 +25,9 @@ class _HomeCommentTwetaState extends State<HomeCommentTweta> {
       children: [
         const TwetaComment(titel: "4"),
         Container(
-          color: Colors.white,
+          color: ModeCubit.get(context).isDark ? Colors.black : Colors.white,
           child: const Divider(
-            height: 01,
+            height: 02,
           ),
         ),
         Expanded(

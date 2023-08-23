@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/generated/l10n.dart';
 
 class CreateTweetViewBody extends StatefulWidget {
   const CreateTweetViewBody({super.key});
@@ -129,7 +130,10 @@ class _CreateTweetViewBodyState extends State<CreateTweetViewBody> {
             onPressed: () {
               Navigator.of(context).pop(false);
             },
-            child: const Text('CLOSE', style: TextStyle(color: Colors.blue)),
+            child: Text(
+              S.of(context).close,
+              style: const TextStyle(color: Colors.blue),
+            ),
           ),
         ],
       ),
