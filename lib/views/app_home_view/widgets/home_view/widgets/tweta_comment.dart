@@ -12,7 +12,26 @@ class TwetaComment extends StatelessWidget {
         children: [
           Row(
             children: [
-              // IconButton list
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Icon(Icons.accessibility),
+              ),
+              const Icon(
+                Icons.location_on,
+                size: 15,
+              ),
+              const Expanded(
+                child: Row(
+                  children: [
+                    Text(
+                      "El Shorouk City",
+                    ),
+                    Text(
+                      " . 1min",
+                    ),
+                  ],
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.only(right: 15),
                 child: IconButton(
@@ -22,20 +41,6 @@ class TwetaComment extends StatelessWidget {
                     size: 30.sp,
                   ),
                 ),
-              ),
-
-              //
-              const Expanded(child: Icon(Icons.rocket_launch)),
-              const Text("1د .", textAlign: TextAlign.right),
-              const Text(" El Shorouk City"),
-              const Icon(Icons.location_on),
-              const Text("1"),
-              const SizedBox(
-                width: 6,
-              ),
-              const Icon(Icons.accessibility),
-              const SizedBox(
-                width: 10,
               ),
             ],
           ),
