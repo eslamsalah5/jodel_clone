@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Boosts": MessageLookupByLibrary.simpleMessage("Boosts"),
         "Boosts_X": MessageLookupByLibrary.simpleMessage("Boosts"),
+        "Confirm_chat_request": MessageLookupByLibrary.simpleMessage(
+            "Would you like to send a private chat request to "),
         "Language": MessageLookupByLibrary.simpleMessage("Language"),
         "My_X": MessageLookupByLibrary.simpleMessage("My X"),
         "My_X_title": MessageLookupByLibrary.simpleMessage("My X"),
@@ -52,9 +54,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("User wants to chat with you"),
         "chat_sub_title": MessageLookupByLibrary.simpleMessage(
             "Your Chat center is empty Now!"),
+        "close": MessageLookupByLibrary.simpleMessage("CLOSE"),
         "comment_text_form_hint":
             MessageLookupByLibrary.simpleMessage("X back here..."),
+        "create_tweet_hint": MessageLookupByLibrary.simpleMessage(
+            "Share Your thoughts with the whole world"),
         "dark_Mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "deny": MessageLookupByLibrary.simpleMessage("Deny"),
         "each": MessageLookupByLibrary.simpleMessage("each"),
         "egp": MessageLookupByLibrary.simpleMessage("EGP"),
@@ -97,6 +103,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Explore communities that interest you"),
         "relevant_title": MessageLookupByLibrary.simpleMessage("Relevant"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "send_chat_request_button":
+            MessageLookupByLibrary.simpleMessage("Send request"),
         "send_message_button":
             MessageLookupByLibrary.simpleMessage("Send a new Massage"),
         "simple_sub_title": MessageLookupByLibrary.simpleMessage(
