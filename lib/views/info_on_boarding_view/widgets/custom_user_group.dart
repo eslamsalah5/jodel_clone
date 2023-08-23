@@ -31,17 +31,13 @@ class CustomUserGroupContainer extends StatelessWidget {
             SizedBox(
               height: 10.h,
             ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.3,
-              height: MediaQuery.of(context).size.height * 0.05,
-              child: Text(
-                title,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 15.sp,
-                  fontWeight: FontWeight.w500,
-                ),
+            Text(
+              title,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 15.sp,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ],

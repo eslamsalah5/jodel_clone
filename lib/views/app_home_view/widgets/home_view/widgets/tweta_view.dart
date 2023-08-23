@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/generated/l10n.dart';
 import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/comment_tweta_body.dart';
 
 import '../../../../../shared/styles/mode/cubit.dart';
@@ -60,19 +61,39 @@ class _TwetaViewState extends State<TwetaView> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 15),
+                  padding: EdgeInsets.only(right: 15),
                   child: PopupMenuButton(
-                    icon: const Icon(
+                    color: ModeCubit.get(context).isDark
+                        ? const Color(0xff26252A)
+                        : Colors.white,
+                    icon: Icon(
                       Icons.more_horiz,
                       size: 35,
+                      color: ModeCubit.get(context).isDark
+                          ? Colors.white
+                          : const Color(
+                              0xff26252A,
+                            ),
                     ),
                     offset: const Offset(0, 40),
                     itemBuilder: (context) => [
                       PopupMenuItem(
                         onTap: () async {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('delete'),
+                            SnackBar(
+                              backgroundColor: ModeCubit.get(context).isDark
+                                  ? const Color(0xff26252A)
+                                  : Colors.white,
+                              content: Text(S.of(context).delete,
+                                  style: TextStyle(
+                                    color: ModeCubit.get(context).isDark
+                                        ? Colors.white
+                                        : const Color(
+                                            0xff26252A,
+                                          ),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  )),
                             ),
                           );
                         },
@@ -86,7 +107,7 @@ class _TwetaViewState extends State<TwetaView> {
 
                             Container(
                               margin: const EdgeInsets.only(left: 10),
-                              child: const Text("delete"),
+                              child: Text(S.of(context).delete),
                             ),
                           ],
                         ),

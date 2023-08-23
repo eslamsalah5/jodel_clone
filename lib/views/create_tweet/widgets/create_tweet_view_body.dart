@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/generated/l10n.dart';
 
 class CreateTweetViewBody extends StatefulWidget {
   const CreateTweetViewBody({super.key});
@@ -43,60 +44,65 @@ class _CreateTweetViewBodyState extends State<CreateTweetViewBody> {
           padding: const EdgeInsets.symmetric(horizontal: 18),
           child: Column(
             children: [
-              TextField(
-                maxLines: 10,
-                autofocus: true,
-                cursorColor: Colors.white,
-                style: TextStyle(
-                    fontSize: 23.sp,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white),
-                decoration: InputDecoration(
-                    border: InputBorder.none,
-                    focusedBorder: InputBorder.none,
-                    enabledBorder: InputBorder.none,
-                    hintText: 'Share Your thoughts with the whole world',
-                    hintStyle: TextStyle(
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white.withOpacity(0.6),
-                    )),
+              Expanded(
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.40,
+                  child: TextField(
+                    maxLines: 10,
+                    autofocus: true,
+                    cursorColor: Colors.white,
+                    style: TextStyle(
+                        fontSize: 23.sp,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white),
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        focusedBorder: InputBorder.none,
+                        enabledBorder: InputBorder.none,
+                        hintText: 'Share Your thoughts with the whole world',
+                        hintStyle: TextStyle(
+                          fontSize: 20.sp,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white.withOpacity(0.6),
+                        )),
+                  ),
+                ),
               ),
               const Spacer(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.black.withOpacity(0.5),
-                    ),
-                    child: const Icon(
-                      Icons.camera_alt_rounded,
-                      color: Colors.white,
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      colorPickerDialog();
-                    },
-                    child: Container(
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.black.withOpacity(0.5),
                       ),
                       child: const Icon(
-                        Icons.water_drop_rounded,
+                        Icons.camera_alt_rounded,
                         color: Colors.white,
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 10.h,
+                    GestureDetector(
+                      onTap: () {
+                        colorPickerDialog();
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.black.withOpacity(0.5),
+                        ),
+                        child: const Icon(
+                          Icons.water_drop_rounded,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -126,7 +132,10 @@ class _CreateTweetViewBodyState extends State<CreateTweetViewBody> {
             onPressed: () {
               Navigator.of(context).pop(false);
             },
-            child: const Text('CLOSE', style: TextStyle(color: Colors.blue)),
+            child: Text(
+              S.of(context).close,
+              style: const TextStyle(color: Colors.blue),
+            ),
           ),
         ],
       ),

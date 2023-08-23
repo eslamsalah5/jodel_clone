@@ -52,11 +52,11 @@ class LocationViewBody extends StatelessWidget {
                       ),
                       MaterialButton(
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5)),
+                            borderRadius: BorderRadius.circular(10)),
                         color: Colors.white,
                         padding: EdgeInsets.symmetric(
-                          horizontal: MediaQuery.of(context).size.width * 0.25,
-                          vertical: 14.h,
+                          horizontal: MediaQuery.of(context).size.width * 0.20,
+                          vertical: 20,
                         ),
                         onPressed: () {
                           Navigator.pushReplacementNamed(

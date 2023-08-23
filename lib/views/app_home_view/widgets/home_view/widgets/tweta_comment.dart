@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/shared/styles/mode/cubit.dart';
 
 class TwetaComment extends StatelessWidget {
   const TwetaComment({super.key, required this.titel});
@@ -7,7 +8,8 @@ class TwetaComment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blueGrey,
+      color:
+          ModeCubit.get(context).isDark ? const Color(0xff26252A) : Colors.cyan,
       child: Column(
         children: [
           Row(

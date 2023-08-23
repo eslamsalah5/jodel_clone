@@ -50,11 +50,11 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                     children: [
                       MaterialButton(
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5)),
+                            borderRadius: BorderRadius.circular(10)),
                         color: Colors.white,
                         padding: EdgeInsets.symmetric(
-                          horizontal: MediaQuery.of(context).size.width * 0.25,
-                          vertical: 14.h,
+                          horizontal: MediaQuery.of(context).size.width * 0.20,
+                          vertical: 20,
                         ),
                         onPressed: () {
                           Navigator.pushReplacementNamed(
@@ -65,8 +65,8 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                           style: TextStyle(fontSize: 20.sp),
                         ),
                       ),
-                      SizedBox(
-                        height: 30.h,
+                      const SizedBox(
+                        height: 12,
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.9,
