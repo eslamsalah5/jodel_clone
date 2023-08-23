@@ -639,6 +639,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Share Your thoughts with the whole world`
+  String get create_tweet_hint {
+    return Intl.message(
+      'Share Your thoughts with the whole world',
+      name: 'create_tweet_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `CLOSE`
+  String get close {
+    return Intl.message(
+      'CLOSE',
+      name: 'close',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Would you like to send a private chat request to `
+  String get Confirm_chat_request {
+    return Intl.message(
+      'Would you like to send a private chat request to ',
+      name: 'Confirm_chat_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send request`
+  String get send_chat_request_button {
+    return Intl.message(
+      'Send request',
+      name: 'send_chat_request_button',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

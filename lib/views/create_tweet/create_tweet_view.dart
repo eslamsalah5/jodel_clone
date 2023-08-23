@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jodel_app/generated/l10n.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
 import 'widgets/create_tweet_view_body.dart';
 
@@ -25,7 +26,7 @@ class CreateTweetView extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: 13.h, right: 13.w),
               child: Text(
-                'Next',
+                S.of(context).next,
                 style: TextStyle(
                   fontSize: 18.sp,
                   color: ModeCubit.get(context).isDark

@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Boosts": MessageLookupByLibrary.simpleMessage("تعزيزات"),
         "Boosts_X": MessageLookupByLibrary.simpleMessage("تعزيز الاكس"),
+        "Confirm_chat_request": MessageLookupByLibrary.simpleMessage(
+            "هل ترغب في ارسال طلب محادثه خاصه الي "),
         "Language": MessageLookupByLibrary.simpleMessage("اللغه"),
         "My_X": MessageLookupByLibrary.simpleMessage("تكساتى"),
         "My_X_title": MessageLookupByLibrary.simpleMessage("قسمي"),
@@ -50,7 +52,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "مركز الدردشة الخاص بك فارغ الآن!"),
         "comment_text_form_hint":
             MessageLookupByLibrary.simpleMessage("ردود ايجابيه فقط!#"),
+        "create_tweet_hint":
+            MessageLookupByLibrary.simpleMessage("شارك أفكارك مع العالم أجمع"),
         "dark_Mode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
+        "delete": MessageLookupByLibrary.simpleMessage("احذف"),
         "deny": MessageLookupByLibrary.simpleMessage("ارفض"),
         "each": MessageLookupByLibrary.simpleMessage("للمره"),
         "egp": MessageLookupByLibrary.simpleMessage("ج.م."),
@@ -93,6 +98,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("استكشف المجتمعات التي تهمك"),
         "relevant_title": MessageLookupByLibrary.simpleMessage("مناسب"),
         "save": MessageLookupByLibrary.simpleMessage("وفر"),
+        "send_chat_request_button":
+            MessageLookupByLibrary.simpleMessage("ارسل طلب"),
         "send_message_button":
             MessageLookupByLibrary.simpleMessage("ارسل رساله جديده"),
         "simple_sub_title": MessageLookupByLibrary.simpleMessage(

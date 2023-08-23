@@ -56,5 +56,9 @@
     "deny": "ارفض",
     "ago": "منذ",
     "notification_receive": "الرد على اكس الخاص بك",
-    "chat_receive": "دردشة خاصة مع "
+    "chat_receive": "دردشة خاصة مع ",
+    "create_tweet_hint": "شارك أفكارك مع العالم أجمع",
+    "Confirm_chat_request": "هل ترغب في ارسال طلب محادثه خاصه الي ",
+    "delete": "احذف",
+    "send_chat_request_button": "ارسل طلب"
 }

@@ -27,7 +27,6 @@ class RectangleWithArrowPainter extends CustomPainter {
     final rectWidth = size.width - 20.0;
     final rectHeight = size.height - 120.0;
     final rect = Rect.fromLTWH(8.0, 60.0, rectWidth, rectHeight);
-    final borderRadius = BorderRadius.circular(8.0);
 
     canvas.drawRRect(
       RRect.fromRectAndCorners(
