@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:jodel_app/generated/l10n.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
+import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/arrow_up_don.dart';
+import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/popupBoutton.dart';
 
 class Commentes extends StatelessWidget {
   const Commentes({
@@ -76,65 +78,17 @@ class Commentes extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 15),
-                child: PopupMenuButton(
-                  color: ModeCubit.get(context).isDark
-                      ? const Color(0xff26252A)
-                      : Colors.white,
-                  icon: Icon(
-                    Icons.more_horiz,
-                    size: 35,
-                    color: ModeCubit.get(context).isDark
-                        ? Colors.white
-                        : const Color(
-                            0xff26252A,
-                          ),
-                  ),
-                  offset: const Offset(0, 40),
-                  itemBuilder: (context) => [
-                    PopupMenuItem(
-                      onTap: () async {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            backgroundColor: ModeCubit.get(context).isDark
-                                ? const Color(0xff26252A)
-                                : Colors.white,
-                            content: Text(S.of(context).delete,
-                                style: TextStyle(
-                                  color: ModeCubit.get(context).isDark
-                                      ? Colors.white
-                                      : const Color(
-                                          0xff26252A,
-                                        ),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                )),
-                          ),
-                        );
-                      },
-                      child: Row(
-                        children: [
-                          ///////////
-                          const Icon(Icons.delete),
-
-                          Container(
-                            margin: const EdgeInsets.only(left: 10),
-                            child: Text(S.of(context).delete),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+              const Padding(
+                padding: EdgeInsets.only(right: 15),
+                child: PopupButton(),
               ),
             ],
           ),
-          Directionality(
+          const Directionality(
             textDirection: TextDirection.ltr,
             child: Row(
               children: [
-                const Expanded(
+                Expanded(
                   flex: 4,
                   child: Padding(
                     padding: EdgeInsets.only(bottom: 85),
@@ -151,30 +105,7 @@ class Commentes extends StatelessWidget {
                 ),
                 Directionality(
                   textDirection: TextDirection.ltr,
-                  child: Expanded(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        InkWell(
-                          // icon arrow_drop_up
-                          onTap: () {},
-                          child: Icon(Icons.keyboard_arrow_up_outlined,
-                              size: 50.sp),
-                        ),
-                        Text(
-                          "0",
-                          style: TextStyle(
-                            fontSize: 20.sp,
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {},
-                          child: Icon(Icons.keyboard_arrow_down_outlined,
-                              size: 50.sp),
-                        ),
-                      ],
-                    ),
-                  ),
+                  child: Expanded(child: ArrowUpDon()),
                 ),
               ],
             ),

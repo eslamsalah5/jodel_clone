@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:jodel_app/generated/l10n.dart';
+import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/arrow_up_don.dart';
 import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/comment_tweta_body.dart';
+import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/popupBoutton.dart';
 
 import '../../../../../shared/styles/mode/cubit.dart';
 
@@ -34,21 +34,21 @@ class _TwetaViewState extends State<TwetaView> {
             ? const Color(0xff26252A)
             : Colors.cyan,
         elevation: 20,
-        child: Column(
+        child: const Column(
           children: [
             Row(
               children: [
                 // IconButton list
                 //
 
-                const Padding(
+                Padding(
                   padding: EdgeInsetsDirectional.only(start: 16.0),
                   child: Icon(
                     Icons.location_on,
                     size: 12,
                   ),
                 ),
-                const Expanded(
+                Expanded(
                   child: Row(
                     children: [
                       Text(
@@ -62,82 +62,7 @@ class _TwetaViewState extends State<TwetaView> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(right: 15),
-                  child: PopupMenuButton(
-                    color: ModeCubit.get(context).isDark
-                        ? const Color(0xff26252A)
-                        : Colors.white,
-                    icon: Icon(
-                      Icons.more_horiz,
-                      size: 35,
-                      color: ModeCubit.get(context).isDark
-                          ? Colors.white
-                          : const Color(
-                              0xff26252A,
-                            ),
-                    ),
-                    offset: const Offset(0, 40),
-                    itemBuilder: (context) => [
-                      PopupMenuItem(
-                        onTap: () async {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              backgroundColor: ModeCubit.get(context).isDark
-                                  ? const Color(0xff26252A)
-                                  : Colors.white,
-                              content: Text(S.of(context).delete,
-                                  style: TextStyle(
-                                    color: ModeCubit.get(context).isDark
-                                        ? Colors.white
-                                        : const Color(
-                                            0xff26252A,
-                                          ),
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  )),
-                            ),
-                          );
-                        },
-                        child: Row(
-                          children: [
-                            ///////////
-                            const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Icon(Icons.delete),
-                            ),
-
-                            Container(
-                              margin: const EdgeInsets.only(left: 10),
-                              child: Text(S.of(context).delete),
-                            ),
-                          ],
-                        ),
-                      ),
-                      PopupMenuItem(
-                        onTap: () async {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('boost'),
-                            ),
-                          );
-                        },
-                        child: Row(
-                          children: [
-                            ///////////
-                            const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child:
-                                  Icon(Icons.phone_bluetooth_speaker_outlined),
-                            ),
-
-                            Container(
-                              margin: const EdgeInsets.only(left: 10),
-                              child: const Text("boost"),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: PopupButton(),
                 ),
               ],
             ),
@@ -145,7 +70,7 @@ class _TwetaViewState extends State<TwetaView> {
               textDirection: TextDirection.ltr,
               child: Row(
                 children: [
-                  const Expanded(
+                  Expanded(
                     flex: 4,
                     child: Padding(
                       padding: EdgeInsets.all(8.0),
@@ -159,40 +84,7 @@ class _TwetaViewState extends State<TwetaView> {
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        InkWell(
-                          // icon arrow_drop_up
-                          onTap: () {
-                            if (es < 3) {
-                              es++;
-                            }
-                            setState(() {});
-                          },
-                          child: Icon(Icons.keyboard_arrow_up_outlined,
-                              size: 50.sp),
-                        ),
-                        Text(
-                          es.toString(),
-                          style: TextStyle(
-                            fontSize: 20.sp,
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            if (es >= 1) {
-                              es--;
-                            }
-                            setState(() {});
-                          },
-                          child: Icon(Icons.keyboard_arrow_down_outlined,
-                              size: 50.sp),
-                        ),
-                      ],
-                    ),
-                  ),
+                  Expanded(child: ArrowUpDon()),
                 ],
               ),
             ),

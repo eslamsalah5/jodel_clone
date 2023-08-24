@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jodel_app/shared/styles/mode/cubit.dart';
+import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/arrow_up_don.dart';
+import 'package:jodel_app/views/app_home_view/widgets/home_view/widgets/popupBoutton.dart';
 
 class TwetaComment extends StatelessWidget {
   const TwetaComment({super.key, required this.titel});
@@ -12,17 +14,17 @@ class TwetaComment extends StatelessWidget {
           ModeCubit.get(context).isDark ? const Color(0xff26252A) : Colors.cyan,
       child: Column(
         children: [
-          Row(
+          const Row(
             children: [
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Icon(Icons.accessibility),
               ),
-              const Icon(
+              Icon(
                 Icons.location_on,
                 size: 15,
               ),
-              const Expanded(
+              Expanded(
                 child: Row(
                   children: [
                     Text(
@@ -35,15 +37,7 @@ class TwetaComment extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 15),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.more_horiz,
-                    size: 30.sp,
-                  ),
-                ),
-              ),
+                  padding: EdgeInsets.only(right: 15), child: PopupButton()),
             ],
           ),
           Directionality(
@@ -78,30 +72,7 @@ class TwetaComment extends StatelessWidget {
                         ),
                       ],
                     )),
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      InkWell(
-                        // icon arrow_drop_up
-                        onTap: () {},
-                        child:
-                            Icon(Icons.keyboard_arrow_up_outlined, size: 50.sp),
-                      ),
-                      Text(
-                        "0",
-                        style: TextStyle(
-                          fontSize: 20.sp,
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {},
-                        child: Icon(Icons.keyboard_arrow_down_outlined,
-                            size: 50.sp),
-                      ),
-                    ],
-                  ),
-                ),
+                const Expanded(child: ArrowUpDon()),
               ],
             ),
           ),
