@@ -61,8 +61,20 @@ class PopupButton extends StatelessWidget {
         PopupMenuItem(
           onTap: () async {
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('boost'),
+              SnackBar(
+                backgroundColor: ModeCubit.get(context).isDark
+                    ? const Color(0xff26252A)
+                    : Colors.white,
+                content: Text(S.of(context).boost,
+                    style: TextStyle(
+                      color: ModeCubit.get(context).isDark
+                          ? Colors.white
+                          : const Color(
+                              0xff26252A,
+                            ),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    )),
               ),
             );
           },
@@ -71,12 +83,12 @@ class PopupButton extends StatelessWidget {
               ///////////
               const Padding(
                 padding: EdgeInsets.all(8.0),
-                child: Icon(Icons.phone_bluetooth_speaker_outlined),
+                child: Icon(Icons.rocket_launch),
               ),
 
               Container(
                 margin: const EdgeInsets.only(left: 10),
-                child: const Text("boost"),
+                child: Text(S.of(context).boost),
               ),
             ],
           ),

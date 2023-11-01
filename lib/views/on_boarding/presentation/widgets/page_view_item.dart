@@ -15,7 +15,7 @@ class PageViewItem extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            width: MediaQuery.of(context).size.width * 0.5,
+            width: MediaQuery.of(context).size.width * 0.45,
             child: Image.asset(
               image!,
             ),
@@ -41,7 +41,7 @@ class PageViewItem extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 30.h,
+            height: 40.h,
           ),
           const Spacer(),
         ],

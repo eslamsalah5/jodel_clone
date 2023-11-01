@@ -59,7 +59,7 @@ class _CreateTweetViewBodyState extends State<CreateTweetViewBody> {
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
                         enabledBorder: InputBorder.none,
-                        hintText: 'Share Your thoughts with the whole world',
+                        hintText: S.of(context).create_tweet_hint,
                         hintStyle: TextStyle(
                           fontSize: 20.sp,
                           fontWeight: FontWeight.w400,

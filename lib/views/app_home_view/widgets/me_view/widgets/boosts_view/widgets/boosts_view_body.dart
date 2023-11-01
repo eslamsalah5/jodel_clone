@@ -139,7 +139,7 @@ class _BoostsViewBodyState extends State<BoostsViewBody> {
             padding: const EdgeInsetsDirectional.symmetric(vertical: 16.0),
             child: Container(
               width: MediaQuery.of(context).size.width * 0.9,
-              height: 60.h,
+              height: MediaQuery.of(context).size.height * 0.09,
               decoration: BoxDecoration(
                 color: purpleColor,
                 borderRadius: BorderRadiusDirectional.circular(12.r),
@@ -161,8 +161,8 @@ class _BoostsViewBodyState extends State<BoostsViewBody> {
                     flex: 1,
                   ),
                   Container(
-                    width: MediaQuery.of(context).size.width * 0.26,
-                    height: 25.h,
+                    width: MediaQuery.of(context).size.width * 0.27,
+                    height: MediaQuery.of(context).size.height * 0.05,
                     decoration: const BoxDecoration(
                       color: Color(0xff7B7DAD),
                     ),
@@ -229,8 +229,8 @@ Widget customContainer(context,
               : Colors.white,
           borderRadius: BorderRadiusDirectional.circular(8),
         ),
-        height: 170.h,
-        width: 100.w,
+        height: MediaQuery.of(context).size.height * 0.29,
+        width: MediaQuery.of(context).size.width * 0.28,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

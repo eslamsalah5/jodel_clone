@@ -15,11 +15,11 @@ class _ImageTwetaState extends State<ImageTweta> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 170.h,
-      width: 500.w,
+      height: MediaQuery.of(context).size.height * 0.29,
+      width: MediaQuery.of(context).size.width,
       child: Card(
         color: ModeCubit.get(context).isDark
-            ? const Color(0xff26252A)
+            ? const Color(0xFF403F44)
             : Colors.cyan,
         child: const Column(
           children: [
@@ -62,10 +62,9 @@ class _ImageTwetaState extends State<ImageTweta> {
                       children: [
                         Expanded(
                           flex: 4,
-                          child: Padding(
-                            padding: EdgeInsets.all(8.0),
+                          child: Center(
                             child: Text(
-                              'اضغض لعرض الصوره او الفيديو',
+                              'اضغط مطولا للمشاهدة',
                               style: TextStyle(
                                 fontSize: 20,
                               ),

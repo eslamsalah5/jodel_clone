@@ -16,7 +16,7 @@ class CustomUserGroupContainer extends StatelessWidget {
         Navigator.pushReplacementNamed(context, AppHomeView.pageID);
       },
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.19,
+        height: MediaQuery.of(context).size.height * 0.20,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),

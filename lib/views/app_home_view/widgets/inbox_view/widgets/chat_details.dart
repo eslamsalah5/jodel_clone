@@ -51,7 +51,9 @@ class ChatDetailsScreen extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                   border: Border.all(
-                      color: Colors.grey.shade300,
+                      color: ModeCubit.get(context).isDark
+                          ? const Color(0xff26252A)
+                          : Colors.grey.shade300,
                       style: BorderStyle.solid,
                       width: 1),
                   borderRadius: BorderRadiusDirectional.circular(15)),
@@ -63,9 +65,8 @@ class ChatDetailsScreen extends StatelessWidget {
                     child: TextFormField(
                       controller: textController,
                       decoration: InputDecoration(
-                        hintText: S.of(context).send_message_button,
-                        border: InputBorder.none,
-                      ),
+                          hintText: S.of(context).send_message_button,
+                          enabledBorder: InputBorder.none),
                     ),
                   ),
                   MaterialButton(

@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allow_location":
             MessageLookupByLibrary.simpleMessage("السماح بالموقع"),
         "apprentice": MessageLookupByLibrary.simpleMessage("حرفي"),
+        "boost": MessageLookupByLibrary.simpleMessage("تعزيز"),
         "boost_now": MessageLookupByLibrary.simpleMessage("عزز الان"),
         "boost_sub_title": MessageLookupByLibrary.simpleMessage(
             "قم بشراء المزيد من أرصدة التعزيز لزيادة المشاركات في \nالاعلي لمدة 10 دقائق إضافية "),
